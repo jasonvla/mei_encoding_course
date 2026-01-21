@@ -22,6 +22,7 @@ In general, I am positively surprised how much can be done in MEI despite not be
 ### Problems
 
 - What does not work and why? Compare comments in the mei-document
+- M. 8; We have two layers and <rest> element within <tuplet>; I could'nt figure out how to only show one rest that counts for both layers. Tried: <space> instead of rest, this shoves the triad.
 - What did I try to fix it?
 
 e.g. 
