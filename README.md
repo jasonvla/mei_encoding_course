@@ -14,11 +14,13 @@ In general, I am positively surprised how much can be done in MEI despite not be
 Learning the basics such as how to place notes, arrange chords and adding accidentals was relatively intuitive. Due to the fact that the mei-friend automatically assigns @xml:id attributes to every encoded object, jumping to a specific measure or an exact note could also easily be done. Despite that, I quickly faced problems that were not solveable to me at first, such as changing the exact height of the <pedal> element in measures 5&6. At some point I was able to fix this issue because I figured out that the @ho and @vo attributes can be used in scenarios where the positions of certain elements in the score have to be changed in order to be matching with the template-sheet in use. 
 **Before (@vo / @ho not adjusted):**
 
-<img src="docs/images/dynamics_before.png" width="220">
+<img width="263" height="140" alt="image" src="https://github.com/user-attachments/assets/e1bb2d69-2492-497c-be61-3e5afda4e972" />
 
-**After (using @vo and @ho):**
 
-<img src="docs/images/dynamics_after.png" width="220">
+**After (using @vo):**
+
+<img width="274" height="146" alt="image" src="https://github.com/user-attachments/assets/d687223c-57e8-46ef-a804-7dbc0f883307" />
+
 
 - notes and chords
 - adding slurs and ties (mostly with xml ids or sometimes tstamps works better)
