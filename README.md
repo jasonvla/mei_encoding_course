@@ -33,6 +33,7 @@ Whereas in other situations like this:
 
 connecting the highest notes of the chords has to be done with a <slur> element. 
 Also, in Chapter _4.3.2 Ties, Slurs and Phrase Marks_ of the Guidelines, there is explained that slur can also be encoded as an attribute. However, I did not really try that in my encoding because I was already kind of used to creating slurs as elements.
+
 During the course, we already figured that using @stamp and @tstamp2 instead of @startid and @endid in a <slur> element creates a different slur. In most of my cases, I went with the id-approach because oftentimes a more "tight" connection of the slur was needed. 
 
 Placing accents with an <artic> element within the <note> element was very convenient and by adding a @place to it, defining the location also worked out fine.
