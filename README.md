@@ -12,11 +12,14 @@ In my opinion it is a perfect piece to practice key concepts of MEI music encodi
 ### What worked well
 In general, I am positively surprised how much can be done in MEI despite not being very experienced in terms of music encoding. 
 Learning the basics such as how to place notes, arrange chords and adding accidentals was relatively intuitive. Due to the fact that the mei-friend automatically assigns @xml:id attributes to every encoded object, jumping to a specific measure or an exact note could also easily be done. Despite that, I quickly faced problems that were not solveable to me at first, such as changing the exact height of the <pedal> element in measures 5&6. At some point I was able to fix this issue because I figured out that the @ho and @vo attributes can be used in scenarios where the positions of certain elements in the score have to be changed in order to be matching with the template-sheet in use. 
-After I discovered the @vo and @ho attributes, I was also able to improve the positions of several <dynam> elements. Before, it sometimes looked like this:
-<img width="112" height="142" alt="Screenshot 2026-01-22 220536" src="https://github.com/user-attachments/assets/264b7c87-0b73-4ebf-be1c-370fd28a668c" />
+**Before (@vo / @ho not adjusted):**
 
-In the real score, dynamics are sometimes placed on the left side of a note or between the lines, so by adding @ho and @vo it looked much more like the reference score:
-<img width="75" height="131" alt="image" src="https://github.com/user-attachments/assets/8bfb8e3e-9c06-4eb9-bd86-cba6bea0cfda" />
+<img src="docs/images/dynamics_before.png" width="220">
+
+**After (using @vo and @ho):**
+
+<img src="docs/images/dynamics_after.png" width="220">
+
 - notes and chords
 - adding slurs and ties (mostly with xml ids or sometimes tstamps works better)
 - placing dynamics
