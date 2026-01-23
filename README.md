@@ -11,7 +11,7 @@ In my opinion it is a perfect piece to practice key concepts of MEI music encodi
 
 ### What worked well
 In general, I am positively surprised how much can be done in MEI despite not being very experienced in terms of music encoding. 
-Learning the basics such as how to place notes, arrange chords and adding accidentals was relatively intuitive. Due to the fact that the mei-friend automatically assigns @xml:id attributes to every encoded object, jumping to a specific measure or an exact note could also easily be done. Despite that, I quickly faced problems that were not solveable to me at first, such as changing the exact height of the <pedal> element in measures 5&6. At some point I was able to fix this issue because I figured out that the @ho and @vo attributes can be used in scenarios where the positions of certain elements in the score have to be changed in order to be matching with the reference-sheet. 
+Learning the basics such as how to place notes, arrange chords and adding accidentals was relatively intuitive. Due to the fact that the mei-friend automatically assigns @xml:id attributes to every encoded object, jumping to a specific measure or an exact note could also easily be done. Despite that, I quickly faced problems that were not solveable to me at first, such as changing the exact height of the `<pedal>` element in measures 5&6. At some point I was able to fix this issue because I figured out that the @ho and @vo attributes can be used in scenarios where the positions of certain elements in the score have to be changed in order to be matching with the reference-sheet. 
 
 **Before (@vo / @ho not adjusted):**
 
@@ -22,7 +22,7 @@ Learning the basics such as how to place notes, arrange chords and adding accide
 
 <img width="274" height="146" alt="image" src="https://github.com/user-attachments/assets/d687223c-57e8-46ef-a804-7dbc0f883307" />
 
-Another interesting aspect of MEI that I've discovered is the usage of either the @tie attribute or the <slur> element. From my point of view, I figured that @tie is very useful in situations like this:
+Another interesting aspect of MEI that I've discovered is the usage of either the @tie attribute or the `<slur>` element. From my point of view, I figured that @tie is very useful in situations like this:
 
 <img width="429" height="137" alt="image" src="https://github.com/user-attachments/assets/8a9dbd81-29c2-4538-81ea-54a62e8fa5b6" />
 
@@ -31,13 +31,13 @@ Whereas in other situations like this:
 
 <img width="471" height="142" alt="image" src="https://github.com/user-attachments/assets/05113b07-315d-4a1c-ac46-49ce44487819" />
 
-connecting the highest notes of the chords has to be done with a <slur> element. 
+connecting the highest notes of the chords has to be done with a `<slur>` element. 
 Also, in Chapter _4.3.2 Ties, Slurs and Phrase Marks_ of the Guidelines, there is explained that slur can also be encoded as an attribute. However, I did not really try that in my encoding because I was already kind of used to creating slurs as elements.
 
 During the course, we already figured that using @tstamp and @tstamp2 instead of @startid and @endid in a <slur> element creates a different slur. In most of my cases, I went with the id-approach because oftentimes a more "tight" connection of the slur was needed. 
 
-Placing accents with an <artic> element within the <note> element was very convenient and by adding a @place to it, defining the location also worked out fine.
-In addition to that, adding metadata within the <meiHead> also worked out fine. However, the metadata-section was not my primary focus because I first wanted to learn how to properly encode the music itself before doing a deep-dive into aspects like adding metadata. 
+Placing accents with an `<artic>` element within the <note> element was very convenient and by adding a @place to it, defining the location also worked out fine.
+In addition to that, adding metadata within the `<meiHead>` also worked out fine. However, the metadata-section was not my primary focus because I first wanted to learn how to properly encode the music itself before doing a deep-dive into aspects like adding metadata. 
 
 
 ### Problems
@@ -45,8 +45,8 @@ In addition to that, adding metadata within the <meiHead> also worked out fine. 
 - What does not work and why? Compare comments in the mei-document
 - What did I try to fix it?
 
-- M. 8; We have two layers and <rest> element within <tuplet>; I could'nt figure out how to only show one rest that counts for both layers. Tried: <space> instead of rest, this shoves the triad.
-- Rendering first 2 staves and then adding the 3rd staff; splitting the score into two separate <mDiv>s did not help either. Compare file *mDivSchoenberg.mei*
+- M. 8; We have two layers and `<rest>` element within `<tuplet>`; I could'nt figure out how to only show one rest that counts for both layers. Tried: `<space>` instead of rest, this shoves the triad.
+- Rendering first 2 staves and then adding the 3rd staff; splitting the score into two separate `<mDiv>`s did not help either. Compare file *mDivSchoenberg.mei*
 
 e.g. 
 - fonts 
