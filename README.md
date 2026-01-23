@@ -36,7 +36,11 @@ Also, in Chapter _4.3.2 Ties, Slurs and Phrase Marks_ of the Guidelines, there i
 
 During the course, we already figured that using @tstamp and @tstamp2 instead of @startid and @endid in a <slur> element creates a different slur. In most of my cases, I went with the id-approach because oftentimes a more "tight" connection of the slur was needed. 
 
-Placing accents with an `<artic>` element within the <note> element was very convenient and by adding a @place to it, defining the location also worked out fine.
+Placing accents with an `<artic>` element within the `<note>` element was very convenient and by adding a @place to it, defining the location also worked out fine.
+
+Furthermore, encoding that accidentals stay the same despite not explicitly written (like the f sharp in measure 1) has to be done with the @accid.ges attribute within a `<note>` element. One thing that confused me was when I looked up Chapter *4.2.5.2.1 Chords in CMN* of the MEI Guidelines. In the according example, there is a C-sharp minor excerpt (*Figure 12*) and directly below it, there is an excerpt of the encoding (*Listing 133*). I do not understand, why adding @accid.ges is needed for notes that are already sharp by definition due to the key signature of C-sharp such as C or G...
+
+
 In addition to that, adding metadata within the `<meiHead>` also worked out fine. However, the metadata-section was not my primary focus because I first wanted to learn how to properly encode the music itself before doing a deep-dive into aspects like adding metadata. 
 
 
