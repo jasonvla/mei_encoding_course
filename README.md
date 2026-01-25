@@ -48,10 +48,11 @@ In addition to that, adding metadata within the `<meiHead>` also worked out fine
 
 At the beginning of the piece, the tempo reads _Sehr langsam (𝅘𝅥)_. Thus I tried to render this quarter note symbol by adding a `<dir>` element and a `<symbol>` element within it:
 
-How I tried to encode the quarter note symbol at first:
+**How I tried to encode the quarter note symbol at first:**
+
 <img width="589" height="97" alt="image" src="https://github.com/user-attachments/assets/49408edf-fd2a-4674-8428-a6f3c26c2741" />
 
-The result of that in Verovio:
+**The result of that in Verovio:**
 
 <img width="127" height="47" alt="image" src="https://github.com/user-attachments/assets/d29d6e32-65ae-42e3-b2ab-86516c30b266" />
 
