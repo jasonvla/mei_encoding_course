@@ -46,9 +46,22 @@ In addition to that, adding metadata within the `<meiHead>` also worked out fine
 
 ### Problems
 
+At the beginning of the piece, the tempo reads _Sehr langsam (𝅘𝅥)_. Thus I tried to render this quarter note symbol by adding a `<dir>` element and a `<symbol>` element within it:
+
+How I tried to encode the quarter note symbol at first:
+<img width="589" height="97" alt="image" src="https://github.com/user-attachments/assets/49408edf-fd2a-4674-8428-a6f3c26c2741" />
+
+The result of that in Verovio:
+
+<img width="127" height="47" alt="image" src="https://github.com/user-attachments/assets/d29d6e32-65ae-42e3-b2ab-86516c30b266" />
+
+I couldn't figure out how to adjust the size of the note symbol. By looking up the valid attributes for `<symbol>`, I found the @scale attribute but adding that did not change the rendered version in Verovio. 
+In order to at least have the symbol integrated (despite probably not being the best way to do it) I added the unicode-symbol 𝅘𝅥 into my encoding.
+
 - What does not work and why? Compare comments in the mei-document
 - What did I try to fix it?
 
+- M. 3; Positon of the lower slur + the tie of the lowest note of the chord should be directed downwards
 - M. 8; We have two layers and `<rest>` element within `<tuplet>`; I could'nt figure out how to only show one rest that counts for both layers. Tried: `<space>` instead of rest, this shoves the triad.
 - Rendering first 2 staves and then adding the 3rd staff; splitting the score into two separate `<mDiv>`s did not help either. Compare file *mDivSchoenberg.mei*
 
