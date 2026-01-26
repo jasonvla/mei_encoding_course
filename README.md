@@ -89,13 +89,12 @@ Implementing the @accid.ges attribute inside of `<note>` elements where it was n
 <img width="311" height="213" alt="image" src="https://github.com/user-attachments/assets/570e6b99-bec6-4bed-bc21-a5f2637a40af" />
 
 It might have something to do with the fact that both these notes are embedded within `<beam>` elements but other than that, I have no clue why that happens or whether that might be a rendering issue.
-- What does not work and why? Compare comments in the mei-document
-- What did I try to fix it?
 
-- M. 3; Positon of the lower slur + the tie of the lowest note of the chord should be directed downwards
-- M. 8; We have two layers and `<rest>` element within `<tuplet>`; I could'nt figure out how to only show one rest that counts for both layers. Tried: `<space>` instead of rest, this shoves the triad.
+Within the two latest pictures, you can already spot another issue I faced concerning the rendering of clefs. This we also discussed earlier in the course but even several weeks later, I still couldn't figure out how to solve the issue that the bass clef in the 2nd staff disappears when the third staff is being implemented. 
 - Rendering first 2 staves and then adding the 3rd staff; splitting the score into two separate `<mDiv>`s did not help either. Compare file *mDivSchoenberg.mei*
 
-e.g. 
+**- What does not work and why? Compare comments in the mei-document
+- What did I try to fix it?**
+- M. 8; We have two layers and `<rest>` element within `<tuplet>`; I could'nt figure out how to only show one rest that counts for both layers. Tried: `<space>` instead of rest, this shoves the triad.
 - fonts 
 - determine exact positions
