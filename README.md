@@ -46,6 +46,9 @@ In addition to that, adding metadata within the `<meiHead>` also worked out fine
 
 ### Problems
 
+(Disclaimer: Every issue I am referring to is also mentioned/explained in comments within the MEI-file itself.)
+
+
 At the beginning of the piece, the tempo reads _Sehr langsam (𝅘𝅥)_. Thus I tried to render this quarter note symbol 𝅘𝅥 by adding a `<dir>` element and a `<symbol>` element within it:
 
 **How I tried to encode the quarter note symbol at first:**
@@ -59,7 +62,23 @@ At the beginning of the piece, the tempo reads _Sehr langsam (𝅘𝅥)_. Thus I tri
 I couldn't figure out how to adjust the size of the note symbol. By looking up the valid attributes for `<symbol>`, I found the @scale attribute but adding that did not change the rendered version in Verovio. 
 In order to at least have the symbol integrated (despite probably not being the best way to do it) I added the unicode-symbol 𝅘𝅥 into my encoding.
 
-Implementing the @accid.ges attribute inside of `<note>` elements where it was needed worked out fine most of the time. Looking at the second c-sharp in measure 7, when I try to add an @accid.ges to that specific note, it influences the stem direction.
+Within measure 3, there are two aspects that should be a little bit different: 
+
+**Firstly**, the curving of the tie on the d-sharp in the first staff should be not that "flat", a little bit more round (compare the reference sheet). Replacing the `<tie>` element with a `<slur>` did not help at all, in fact it even made the positioning worse.
+
+**Secondly**, looking at the high d-sharp within the 2nd staff; I encoded a `<slur>` with @startid and @endid where the starting note is the mentioned high d-sharp (staff 2, measure 3) and the ending note is the other high d-sharp (staff 2, measure 4). Despite that, the first half of the slur is not getting rendered sometimes.
+
+When I set the rendering mode to _Automatic_, it does get rendered (see the blue slur in the picture):
+
+<img width="600" height="381" alt="image" src="https://github.com/user-attachments/assets/93ef85f1-6aa9-4496-ba05-86d2513e354e" />
+
+But when setting it to _System and page_ (that's the view I had set for nearly the entire time when encoding the piece):
+
+<img width="910" height="506" alt="Screenshot 2026-01-26 231111" src="https://github.com/user-attachments/assets/5ee1e6a6-a8a9-4d65-99c1-f7c585d39bd7" />
+
+The second half of the slur is gone; I tried googling and finding something in the guidelines but I couldn't figure out how to solve this. I am pretty sure that we've already stumbled across that problem during the course itself... 
+
+Implementing the @accid.ges attribute inside of `<note>` elements where it was needed worked out fine most of the time. Looking at the second c-sharp in measure 7, when I try to add an @accid.ges to that specific note, it influences the stem direction and removes one note.
 
 **Without @accid.ges in the 2nd c-sharp:**
 
@@ -69,7 +88,7 @@ Implementing the @accid.ges attribute inside of `<note>` elements where it was n
 
 <img width="311" height="213" alt="image" src="https://github.com/user-attachments/assets/570e6b99-bec6-4bed-bc21-a5f2637a40af" />
 
-
+It might have something to do with the fact that both these notes are embedded within `<beam>` elements but other than that, I have no clue why that happens or whether that might be a rendering issue.
 - What does not work and why? Compare comments in the mei-document
 - What did I try to fix it?
 
