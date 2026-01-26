@@ -46,7 +46,7 @@ In addition to that, adding metadata within the `<meiHead>` also worked out fine
 
 ### Problems
 
-At the beginning of the piece, the tempo reads _Sehr langsam (𝅘𝅥)_. Thus I tried to render this quarter note symbol by adding a `<dir>` element and a `<symbol>` element within it:
+At the beginning of the piece, the tempo reads _Sehr langsam (𝅘𝅥)_. Thus I tried to render this quarter note symbol 𝅘𝅥 by adding a `<dir>` element and a `<symbol>` element within it:
 
 **How I tried to encode the quarter note symbol at first:**
 
