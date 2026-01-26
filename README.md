@@ -59,6 +59,17 @@ At the beginning of the piece, the tempo reads _Sehr langsam (𝅘𝅥)_. Thus I tri
 I couldn't figure out how to adjust the size of the note symbol. By looking up the valid attributes for `<symbol>`, I found the @scale attribute but adding that did not change the rendered version in Verovio. 
 In order to at least have the symbol integrated (despite probably not being the best way to do it) I added the unicode-symbol 𝅘𝅥 into my encoding.
 
+Implementing the @accid.ges attribute inside of `<note>` elements where it was needed worked out fine most of the time. Looking at the second c-sharp in measure 7, when I try to add an @accid.ges to that specific note, it influences the stem direction.
+
+**Without @accid.ges in the 2nd c-sharp:**
+
+<img width="329" height="199" alt="image" src="https://github.com/user-attachments/assets/10a868f1-571b-49f2-b35a-8cf39a978362" />
+
+**With @accid.ges added to the 2nd c-sharp:**
+
+<img width="311" height="213" alt="image" src="https://github.com/user-attachments/assets/570e6b99-bec6-4bed-bc21-a5f2637a40af" />
+
+
 - What does not work and why? Compare comments in the mei-document
 - What did I try to fix it?
 
