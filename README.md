@@ -105,11 +105,17 @@ Looking at the first staff in measure 8, we have two layers and a `<rest>` eleme
 
 **With `<rest>`:**
 
-![Rest example](pictures/MEIpictures/11rest.png)
-
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{pictures/MEIpictures/11rest.png}
+\end{figure}
 **With `<space>`:**
 
-![Space example](pictures/MEIpictures/12space.png)
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{pictures/MEIpictures/12space.png}
+\end{figure}
+
 
 Furthermore, there are aspects of the visual appearance that need to be addressed at some point such as the engraving style and the general typography.
 - What does not work and why? Compare comments in the mei-document
