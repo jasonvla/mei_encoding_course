@@ -48,7 +48,7 @@ Learning the basics such as how to place notes, arrange chords and adding accide
 ```{=latex}
 \begin{figure}[H]
 \centering
-\includegraphics[width=1\textwidth]{pictures/MEIpictures/2After_vo.png}
+\includegraphics[width=0.7\textwidth]{pictures/MEIpictures/2After_vo.png}
 \caption{After adding @vo}
 \end{figure}
 ``` 
@@ -69,7 +69,7 @@ Whereas in other situations like this:
 ```{=latex}
 \begin{figure}[H]
 \centering
-\includegraphics[width=1\textwidth]{pictures/MEIpictures/4tie.png}
+\includegraphics[width=0.7\textwidth]{pictures/MEIpictures/4tie.png}
 \caption{Slur example}
 \end{figure}
 ```
@@ -110,7 +110,7 @@ At the beginning of the piece, the tempo reads _Sehr langsam (♩)_. Thus I trie
 ```{=latex}
 \begin{figure}[H]
 \centering
-\includegraphics[width=1\textwidth]{pictures/MEIpictures/6langsam.png}
+\includegraphics[width=0.5\textwidth]{pictures/MEIpictures/6langsam.png}
 \caption{Quarter note result}
 \end{figure}
 ```
@@ -158,7 +158,7 @@ Implementing the @accid.ges attribute inside of `<note>` elements where it was n
 ```{=latex}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\textwidth]{pictures/MEIpictures/10accid.png}
+\includegraphics[width=0.6\textwidth]{pictures/MEIpictures/10accid.png}
 \caption{C-sharp with @accid.ges}
 \end{figure}
 ```
