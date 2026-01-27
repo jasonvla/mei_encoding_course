@@ -110,18 +110,19 @@ Within the two latest pictures, you can already spot another issue I faced conce
 Looking at the first staff in measure 8, we have two layers and a `<rest>` element within a `<tuplet>`; I couldn't figure out how to only show one rest that counts for both layers. Adding `<space>` instead of `<rest>` will move the triad.
 
 **With `<rest>`:**
-
+```tex
 \begin{figure}[H]
 \centering
 \includegraphics[width=1\textwidth]{pictures/MEIpictures/11rest.png}
 \end{figure}
+```
 **With `<space>`:**
-
+```tex
 \begin{figure}[H]
 \centering
 \includegraphics[width=1\textwidth]{pictures/MEIpictures/12space.png}
 \end{figure}
-
+```
 
 Furthermore, there are aspects of the visual appearance that need to be addressed at some point such as the engraving style and the general typography.
 - What does not work and why? Compare comments in the mei-document
