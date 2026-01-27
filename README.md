@@ -24,25 +24,55 @@ In my opinion it is a perfect piece to practice key concepts of MEI music encodi
 In general, I am positively surprised how much can be done in MEI despite not being very experienced in terms of music encoding. 
 Learning the basics such as how to place notes, arrange chords and adding accidentals was relatively intuitive. Due to the fact that the mei-friend automatically assigns @xml:id attributes to every encoded object, jumping to a specific measure or an exact note could also easily be done. Despite that, I quickly faced problems that were not solveable for me at first, such as changing the exact height of the `<pedal>` element in measures 5&6. At some point I was able to fix this issue because I figured out that the @ho and @vo attributes can be used in scenarios where the positions of certain elements in the score have to be changed in order to be matching with the reference-sheet. 
 
+<!--
 **Before (@vo / @ho not adjusted):**
 
 ![Before](pictures/MEIpictures/1Before_v.png)
+-->
 
+
+```{=latex}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{pictures/MEIpictures/1Before_v.png}
+\caption{Before adding @vo}
+\end{figure}
+``` 
+<!-- 
 **After (using @vo):**
 
 ![After using @vo](pictures/MEIpictures/2After_vo.png)
+-->
 
 
-
+```{=latex}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{pictures/MEIpictures/2After_vo.png}
+\caption{After adding @vo}
+\end{figure}
+``` 
 
 Another interesting aspect of MEI that I've discovered is the usage of either the @tie attribute or the `<slur>` element. From my point of view, I figured that @tie is very useful in situations like this:
 
-![Tie example](pictures/MEIpictures/3tie.png)
+```{=latex}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{pictures/MEIpictures/3tie.png}
+\caption{Tie example}
+\end{figure}
+```
 
 Here, the same pitch is being held across multiple notes.
 Whereas in other situations like this:
 
-![Slur example](pictures/MEIpictures/4tie.png)
+```{=latex}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{pictures/MEIpictures/4tie.png}
+\caption{Slur example}
+\end{figure}
+```
 
 connecting the highest notes of the chords has to be done with a `<slur>` element. 
 Also, in Chapter _4.3.2 Ties, Slurs and Phrase Marks_ of the Guidelines, there is explained that slur can also be encoded as an attribute. However, I did not really try that in my encoding because I was already kind of used to creating slurs as elements.
@@ -68,12 +98,22 @@ At the beginning of the piece, the tempo reads _Sehr langsam (♩)_. Thus I trie
 
 **How I tried to encode the quarter note symbol at first:**
 
-![Quarter note code](pictures/MEIpictures/5code.png)
-
+```{=latex}
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{pictures/MEIpictures/5code.png}
+\caption{Quarter note code}
+\end{figure}
+```
 **The result of that in Verovio:**
 
-![Quarter note result](pictures/MEIpictures/6langsam.png)
-
+```{=latex}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{pictures/MEIpictures/6langsam.png}
+\caption{Quarter note result}
+\end{figure}
+```
 I couldn't figure out how to adjust the size of the note symbol. By looking up the valid attributes for `<symbol>`, I found the @scale attribute but adding that did not change the rendered version in Verovio. 
 In order to at least have the symbol integrated (despite probably not being the best way to do it) I added the unicode-symbol ♩ into my encoding.
 
@@ -85,44 +125,46 @@ Within measure 3, there are two aspects that should be a little bit different:
 
 When I set the rendering mode to _Automatic_, it does get rendered (see the blue slur in the picture):
 
-![Curving tie](pictures/MEIpictures/7renderer.png)
-
+```{=latex}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{pictures/MEIpictures/7renderer.png}
+\caption{Curving tie}
+\end{figure}
+```
 But when setting it to _System and page_ (that's the view I had set for nearly the entire time when encoding the piece):
 
-![System and page mode](pictures/MEIpictures/8renderer.png)
-
+```{=latex}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{pictures/MEIpictures/8renderer.png}
+\caption{System and page mode}
+\end{figure}
+```
 The second half of the slur is gone; I tried googling and finding something in the guidelines but I couldn't figure out how to solve this. I am pretty sure that we've already stumbled across that problem during the course itself... 
 
 Implementing the @accid.ges attribute inside of `<note>` elements where it was needed worked out fine most of the time. Looking at the second c-sharp in measure 7, when I try to add an @accid.ges to that specific note, it influences the stem direction and removes one note.
 
 **Without @accid.ges in the 2nd c-sharp:**
 
-![C-sharp without @accid.ges](pictures/MEIpictures/9accid.png)
-
+```{=latex}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{pictures/MEIpictures/9accid.png}
+\caption{C-sharp without @accid.ges}
+\end{figure}
+```
 **With @accid.ges added to the 2nd c-sharp:**
-
-![C-sharp with @accid.ges](pictures/MEIpictures/10accid.png)
-
+```{=latex}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{pictures/MEIpictures/10accid.png}
+\caption{C-sharp with @accid.ges}
+\end{figure}
+```
 It might have something to do with the fact that both these notes are embedded within `<beam>` elements but other than that, I have no clue why that happens or whether that might be a rendering issue.
 
 Within the two latest pictures, you can already spot another issue I faced concerning the rendering of clefs. This we also discussed earlier in the course but even several weeks later, I still couldn't figure out how to solve the issue that the bass clef in the 2nd staff disappears when the third staff is being implemented. After splitting the score into two `<mDiv>`s (which we thought could be the solution) the problem still existed. I've uploaded a file *mDivSchoenberg.mei* (that was at a much earlier state of my encoding) in which I tried to divide the score with two `<mDiv>` elements but I am not sure whether that was the right way to do it because when the second `<mDiv>` should start, it does not even get rendered... I tried switching up the @type attribute with @label but that did not help either. Moreover, probably due to the implementation of the third staff, the encoded @brace in `<grpSym>` (within `<staffGrp>`) is only being rendered partially starting from measure 7.
-
-Looking at the first staff in measure 8, we have two layers and a `<rest>` element within a `<tuplet>`; I couldn't figure out how to only show one rest that counts for both layers. Adding `<space>` instead of `<rest>` will move the triad.
-
-**With `<rest>`:**
-```tex
-\begin{figure}[H]
-\centering
-\includegraphics[width=1\textwidth]{pictures/MEIpictures/11rest.png}
-\end{figure}
-```
-**With `<space>`:**
-```tex
-\begin{figure}[H]
-\centering
-\includegraphics[width=1\textwidth]{pictures/MEIpictures/12space.png}
-\end{figure}
-```
 
 Furthermore, there are aspects of the visual appearance that need to be addressed at some point such as the engraving style and the general typography.
 - What does not work and why? Compare comments in the mei-document
