@@ -34,7 +34,7 @@ Learning the basics such as how to place notes, arrange chords and adding accide
 ```{=latex}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\textwidth]{(pictures/MEIpictures/1Before_v.png}
+\includegraphics[width=0.7\textwidth]{pictures/MEIpictures/1Before_v.png}
 \caption{Before adding @vo}
 \end{figure}
 ``` 
