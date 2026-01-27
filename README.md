@@ -15,21 +15,21 @@ Learning the basics such as how to place notes, arrange chords and adding accide
 
 **Before (@vo / @ho not adjusted):**
 
-<img width="263" height="140" alt="image" src="pictures/MEIpictures/1Before_v.png" />
-
+![Before](pictures/MEIpictures/1Before_v.png)
 
 **After (using @vo):**
 
-<img width="274" height="146" alt="image" src="pictures/MEIpictures/2After_vo.png" />
+![After using @vo](pictures/MEIpictures/2After_vo.png)
+
 
 Another interesting aspect of MEI that I've discovered is the usage of either the @tie attribute or the `<slur>` element. From my point of view, I figured that @tie is very useful in situations like this:
 
-<img width="429" height="137" alt="image" src="pictures/MEIpictures/3tie.png" />
+![Tie example](pictures/MEIpictures/3tie.png)
 
 Here, the same pitch is being held across multiple notes.
 Whereas in other situations like this:
 
-<img width="471" height="142" alt="image" src="pictures/MEIpictures/4tie.png" />
+![Slur example](pictures/MEIpictures/4tie.png)
 
 connecting the highest notes of the chords has to be done with a `<slur>` element. 
 Also, in Chapter _4.3.2 Ties, Slurs and Phrase Marks_ of the Guidelines, there is explained that slur can also be encoded as an attribute. However, I did not really try that in my encoding because I was already kind of used to creating slurs as elements.
@@ -55,11 +55,11 @@ At the beginning of the piece, the tempo reads _Sehr langsam (𝅘𝅥)_. Thus I tri
 
 **How I tried to encode the quarter note symbol at first:**
 
-<img width="589" height="97" alt="image" src="pictures/MEIpictures/5code.png" />
+![Quarter note code](pictures/MEIpictures/5code.png)
 
 **The result of that in Verovio:**
 
-<img width="127" height="47" alt="image" src="pictures/MEIpictures/6langsam.png" />
+![Quarter note result](pictures/MEIpictures/6langsam.png)
 
 I couldn't figure out how to adjust the size of the note symbol. By looking up the valid attributes for `<symbol>`, I found the @scale attribute but adding that did not change the rendered version in Verovio. 
 In order to at least have the symbol integrated (despite probably not being the best way to do it) I added the unicode-symbol 𝅘𝅥 into my encoding.
@@ -72,11 +72,11 @@ Within measure 3, there are two aspects that should be a little bit different:
 
 When I set the rendering mode to _Automatic_, it does get rendered (see the blue slur in the picture):
 
-<img width="600" height="381" alt="image" src="pictures/MEIpictures/7renderer.png" />
+![Curving tie](pictures/MEIpictures/7renderer.png)
 
 But when setting it to _System and page_ (that's the view I had set for nearly the entire time when encoding the piece):
 
-<img width="910" height="506" alt="Screenshot 2026-01-26 231111" src="pictures/MEIpictures/8renderer.png" />
+![System and page mode](pictures/MEIpictures/8renderer.png)
 
 The second half of the slur is gone; I tried googling and finding something in the guidelines but I couldn't figure out how to solve this. I am pretty sure that we've already stumbled across that problem during the course itself... 
 
@@ -84,11 +84,11 @@ Implementing the @accid.ges attribute inside of `<note>` elements where it was n
 
 **Without @accid.ges in the 2nd c-sharp:**
 
-<img width="329" height="199" alt="image" src="pictures/MEIpictures/9accid.png" />
+![C-sharp without @accid.ges](pictures/MEIpictures/9accid.png)
 
 **With @accid.ges added to the 2nd c-sharp:**
 
-<img width="311" height="213" alt="image" src="pictures/MEIpictures/10accid.png" />
+![C-sharp with @accid.ges](pictures/MEIpictures/10accid.png)
 
 It might have something to do with the fact that both these notes are embedded within `<beam>` elements but other than that, I have no clue why that happens or whether that might be a rendering issue.
 
@@ -98,11 +98,11 @@ Looking at the first staff in measure 8, we have two layers and a `<rest>` eleme
 
 **With `<rest>`:**
 
-<img width="214" height="87" alt="image" src="pictures/MEIpictures/11rest.png" />
+![Rest example](pictures/MEIpictures/11rest.png)
 
 **With `<space>`:**
 
-<img width="220" height="105" alt="image" src="pictures/MEIpictures/12space.png" />
+![Space example](pictures/MEIpictures/12space.png)
 
 
 - What does not work and why? Compare comments in the mei-document
