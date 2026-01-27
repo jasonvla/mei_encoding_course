@@ -1,3 +1,11 @@
+---
+title: README
+author: Jason Ackermann
+fontsize: 12pt
+geometry: margin=3cm
+header-includes:
+\usepackage{float}
+---
 # Report
 In this repository, I am presenting both my files and a report where I comment on what worked out and what did not.
 
