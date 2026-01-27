@@ -38,7 +38,9 @@ During the course, we already figured that using @tstamp and @tstamp2 instead of
 
 Placing accents with an `<artic>` element within the `<note>` element was very convenient and by adding a @place to it, defining the location also worked out fine.
 
-Furthermore, encoding that accidentals stay the same despite not explicitly written (like the f sharp in measure 1) has to be done with the @accid.ges attribute within a `<note>` element. One thing that confused me was when I looked up Chapter *4.2.5.2.1 Chords in CMN* of the MEI Guidelines. In the according example, there is a C-sharp minor excerpt (*Figure 12*) and directly below it, there is an excerpt of the encoding (*Listing 133*). I do not understand, why adding @accid.ges is needed for notes that are already sharp by definition due to the key signature of C-sharp such as C or G...
+Furthermore, encoding that accidentals stay the same despite not explicitly written (like the f sharp in measure 1) has to be done with the @accid.ges attribute within a `<note>` element. 
+
+One thing confused me was when I looked up Chapter *4.2.5.2.1 Chords in CMN* of the MEI Guidelines: In the according example, there is a C-sharp minor excerpt (*Figure 12*) and directly below it, there is an excerpt of the encoding (*Listing 133*). I do not understand, why adding @accid.ges is needed for notes that are already sharp by definition due to the key signature of C-sharp such as C or G...
 
 
 In addition to that, adding metadata within the `<meiHead>` also worked out fine. However, the metadata-section was not my primary focus because I first wanted to learn how to properly encode the music itself before doing a deep-dive into aspects like adding metadata. 
@@ -57,7 +59,7 @@ At the beginning of the piece, the tempo reads _Sehr langsam (𝅘𝅥)_. Thus I tri
 
 **The result of that in Verovio:**
 
-<img width="127" height="47" alt="image" src=""pictures/MEIpictures/6langsam.png" />
+<img width="127" height="47" alt="image" src="pictures/MEIpictures/6langsam.png" />
 
 I couldn't figure out how to adjust the size of the note symbol. By looking up the valid attributes for `<symbol>`, I found the @scale attribute but adding that did not change the rendered version in Verovio. 
 In order to at least have the symbol integrated (despite probably not being the best way to do it) I added the unicode-symbol 𝅘𝅥 into my encoding.
@@ -70,7 +72,7 @@ Within measure 3, there are two aspects that should be a little bit different:
 
 When I set the rendering mode to _Automatic_, it does get rendered (see the blue slur in the picture):
 
-<img width="600" height="381" alt="image" src=""pictures/MEIpictures/7renderer.png" />
+<img width="600" height="381" alt="image" src="pictures/MEIpictures/7renderer.png" />
 
 But when setting it to _System and page_ (that's the view I had set for nearly the entire time when encoding the piece):
 
@@ -92,6 +94,15 @@ It might have something to do with the fact that both these notes are embedded w
 
 Within the two latest pictures, you can already spot another issue I faced concerning the rendering of clefs. This we also discussed earlier in the course but even several weeks later, I still couldn't figure out how to solve the issue that the bass clef in the 2nd staff disappears when the third staff is being implemented. After splitting the score into two `<mDiv>`s (which we thought would be the solution) the problem still existed. I've uploaded a file *mDivSchoenberg.mei* (that was at a much earlier state of my encoding) in which I tried to divide the score with two `<mDiv>` elements but I am not sure whether that was the right way to do it because when the second `<mDiv>` should start, it does not even get rendered... I tried switching up the @type attribute with @label but that did not help either.
 
+Looking at the first staff in measure 8, we have two layers and a `<rest>` element within a `<tuplet>`; I could'nt figure out how to only show one rest that counts for both layers. Adding `<space>` instead of `<rest>` will move the triad.
+
+**With `<rest>`:**
+
+<img width="214" height="87" alt="image" src="pictures/MEIpictures/11rest.png" />
+
+**With `<space>`:**
+
+<img width="220" height="105" alt="image" src="pictures/MEIpictures/12space.png" />
 
 **- What does not work and why? Compare comments in the mei-document
 - What did I try to fix it?**
