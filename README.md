@@ -94,7 +94,7 @@ It might have something to do with the fact that both these notes are embedded w
 
 Within the two latest pictures, you can already spot another issue I faced concerning the rendering of clefs. This we also discussed earlier in the course but even several weeks later, I still couldn't figure out how to solve the issue that the bass clef in the 2nd staff disappears when the third staff is being implemented. After splitting the score into two `<mDiv>`s (which we thought would be the solution) the problem still existed. I've uploaded a file *mDivSchoenberg.mei* (that was at a much earlier state of my encoding) in which I tried to divide the score with two `<mDiv>` elements but I am not sure whether that was the right way to do it because when the second `<mDiv>` should start, it does not even get rendered... I tried switching up the @type attribute with @label but that did not help either.
 
-Looking at the first staff in measure 8, we have two layers and a `<rest>` element within a `<tuplet>`; I could'nt figure out how to only show one rest that counts for both layers. Adding `<space>` instead of `<rest>` will move the triad.
+Looking at the first staff in measure 8, we have two layers and a `<rest>` element within a `<tuplet>`; I couldn't figure out how to only show one rest that counts for both layers. Adding `<space>` instead of `<rest>` will move the triad.
 
 **With `<rest>`:**
 
@@ -104,8 +104,8 @@ Looking at the first staff in measure 8, we have two layers and a `<rest>` eleme
 
 <img width="220" height="105" alt="image" src="pictures/MEIpictures/12space.png" />
 
-**- What does not work and why? Compare comments in the mei-document
-- What did I try to fix it?**
-- M. 8; We have two layers and `<rest>` element within `<tuplet>`; I could'nt figure out how to only show one rest that counts for both layers. Tried: `<space>` instead of rest, this shoves the triad.
+
+- What does not work and why? Compare comments in the mei-document
+- What did I try to fix it?
 - fonts 
 - determine exact positions
