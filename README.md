@@ -173,7 +173,7 @@ Looking at the second staff in measure 8, the f-sharp should not be part of the 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\textwidth]{pictures/MEIpictures/14fsharp.png}
-\caption{C-sharp with @accid.ges}
+\caption{M. 8; f-sharp in my encoding}
 \end{figure}
 ```
 
@@ -182,7 +182,7 @@ Looking at the second staff in measure 8, the f-sharp should not be part of the 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\textwidth]{pictures/MEIpictures/15fsharp.png}
-\caption{C-sharp with @accid.ges}
+\caption{M. 8; f-sharp in the reference sheet}
 \end{figure}
 ```
 
