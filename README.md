@@ -15,7 +15,7 @@ Learning the basics such as how to place notes, arrange chords and adding accide
 
 **Before (@vo / @ho not adjusted):**
 
-<img width="263" height="140" alt="image" src="photos/MEIpictures/1Before_v.png" />
+<img width="263" height="140" alt="image" src="pictures/MEIpictures/1Before_v.png" />
 
 
 **After (using @vo):**
