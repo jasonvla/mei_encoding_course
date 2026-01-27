@@ -32,8 +32,13 @@ Learning the basics such as how to place notes, arrange chords and adding accide
 
 ![After using @vo](pictures/MEIpictures/2After_vo.png)
 
-
-
+```{=latex}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{pictures/MEIpictures/2After_vo.png}
+\caption{Fixiertes Bild}
+\end{figure}
+``` 
 
 Another interesting aspect of MEI that I've discovered is the usage of either the @tie attribute or the `<slur>` element. From my point of view, I figured that @tie is very useful in situations like this:
 
