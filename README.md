@@ -7,6 +7,7 @@ Throughout the encoding process with _mei-friend_, I mostly rendered the notatio
 **Final product (visualized with the above-mentioned Layout):**
 
 ![Result](pictures/MEIpictures/13result.png)
+
 # Motivation
 
 When we were told to look up a suitable piece to encode, I wanted to find something that a) included new concepts I haven't used in MEI yet and b) is not longer than 20 measures. After doing a little bit of research, I decided to try the *VI.* from *Schoenbergs Sechs kleine Klavierstücke, Op.19*. At first glance, I already discovered several things that I knew would become difficult to encode, such as the additional third line during the last few measures, multiple layers within the staves (partially even within triplets), etc.
