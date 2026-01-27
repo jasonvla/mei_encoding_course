@@ -2,14 +2,18 @@
 In this repository, I am presenting both my files and a report where I comment on what worked out and what did not.
 
 (Disclaimer: **I did not use any kind of AI for the encoding**. During the last lecture, I tried a few prompts and the results were not good at all. So I decided to not include it into my workflow at all, solely relying on the Guidelines and the things we've learned during the course.)
+Throughout the encoding process with _mei-friend_, I mostly rendered the notation with the _System and page_-Layout.
 
-### Motivation
+**Final product (visualized with the above-mentioned Layout):**
+
+![Result](pictures/MEIpictures/13result.png)
+# Motivation
 
 When we were told to look up a suitable piece to encode, I wanted to find something that a) included new concepts I haven't used in MEI yet and b) is not longer than 20 measures. After doing a little bit of research, I decided to try the *VI.* from *Schoenbergs Sechs kleine Klavierstücke, Op.19*. At first glance, I already discovered several things that I knew would become difficult to encode, such as the additional third line during the last few measures, multiple layers within the staves (partially even within triplets), etc.
 In my opinion it is a perfect piece to practice key concepts of MEI music encoding because of its high density of encoding questions covered in only a handful of measures.
 
 
-### What worked well
+# What worked well
 In general, I am positively surprised how much can be done in MEI despite not being very experienced in terms of music encoding. 
 Learning the basics such as how to place notes, arrange chords and adding accidentals was relatively intuitive. Due to the fact that the mei-friend automatically assigns @xml:id attributes to every encoded object, jumping to a specific measure or an exact note could also easily be done. Despite that, I quickly faced problems that were not solveable for me at first, such as changing the exact height of the `<pedal>` element in measures 5&6. At some point I was able to fix this issue because I figured out that the @ho and @vo attributes can be used in scenarios where the positions of certain elements in the score have to be changed in order to be matching with the reference-sheet. 
 
@@ -20,11 +24,6 @@ Learning the basics such as how to place notes, arrange chords and adding accide
 **After (using @vo):**
 
 ![After using @vo](pictures/MEIpictures/2After_vo.png)
-
-
-
-
-
 
 
 
@@ -53,7 +52,7 @@ One thing confused me was when I looked up Chapter *4.2.5.2.1 Chords in CMN* of 
 In addition to that, adding metadata within the `<meiHead>` also worked out fine. However, the metadata-section was not my primary focus because I first wanted to learn how to properly encode the music itself before doing a deep-dive into aspects like adding metadata. 
 
 
-### Problems
+# Problems
 
 (Disclaimer: Every issue I am referring to is also mentioned/explained in comments within the MEI-file itself.)
 
@@ -99,7 +98,7 @@ Implementing the @accid.ges attribute inside of `<note>` elements where it was n
 
 It might have something to do with the fact that both these notes are embedded within `<beam>` elements but other than that, I have no clue why that happens or whether that might be a rendering issue.
 
-Within the two latest pictures, you can already spot another issue I faced concerning the rendering of clefs. This we also discussed earlier in the course but even several weeks later, I still couldn't figure out how to solve the issue that the bass clef in the 2nd staff disappears when the third staff is being implemented. After splitting the score into two `<mDiv>`s (which we thought would be the solution) the problem still existed. I've uploaded a file *mDivSchoenberg.mei* (that was at a much earlier state of my encoding) in which I tried to divide the score with two `<mDiv>` elements but I am not sure whether that was the right way to do it because when the second `<mDiv>` should start, it does not even get rendered... I tried switching up the @type attribute with @label but that did not help either.
+Within the two latest pictures, you can already spot another issue I faced concerning the rendering of clefs. This we also discussed earlier in the course but even several weeks later, I still couldn't figure out how to solve the issue that the bass clef in the 2nd staff disappears when the third staff is being implemented. After splitting the score into two `<mDiv>`s (which we thought could be the solution) the problem still existed. I've uploaded a file *mDivSchoenberg.mei* (that was at a much earlier state of my encoding) in which I tried to divide the score with two `<mDiv>` elements but I am not sure whether that was the right way to do it because when the second `<mDiv>` should start, it does not even get rendered... I tried switching up the @type attribute with @label but that did not help either. Moreover, probably due to the implementation of the third staff, the encoded @brace in `<grpSym>` (within `<staffGrp>`) is only being rendered partially starting from measure 7.
 
 Looking at the first staff in measure 8, we have two layers and a `<rest>` element within a `<tuplet>`; I couldn't figure out how to only show one rest that counts for both layers. Adding `<space>` instead of `<rest>` will move the triad.
 
@@ -111,7 +110,7 @@ Looking at the first staff in measure 8, we have two layers and a `<rest>` eleme
 
 ![Space example](pictures/MEIpictures/12space.png)
 
-
+Furthermore, there are aspects of the visual appearance that need to be addressed at some point such as the engraving style and the general typography.
 - What does not work and why? Compare comments in the mei-document
 - What did I try to fix it?
 - fonts 
