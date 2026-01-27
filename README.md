@@ -22,6 +22,13 @@ Learning the basics such as how to place notes, arrange chords and adding accide
 ![After using @vo](pictures/MEIpictures/2After_vo.png)
 
 
+
+
+
+
+
+
+
 Another interesting aspect of MEI that I've discovered is the usage of either the @tie attribute or the `<slur>` element. From my point of view, I figured that @tie is very useful in situations like this:
 
 ![Tie example](pictures/MEIpictures/3tie.png)
@@ -62,7 +69,7 @@ At the beginning of the piece, the tempo reads _Sehr langsam (♩)_. Thus I trie
 ![Quarter note result](pictures/MEIpictures/6langsam.png)
 
 I couldn't figure out how to adjust the size of the note symbol. By looking up the valid attributes for `<symbol>`, I found the @scale attribute but adding that did not change the rendered version in Verovio. 
-In order to at least have the symbol integrated (despite probably not being the best way to do it) I added the unicode-symbol 𝅘𝅥 into my encoding.
+In order to at least have the symbol integrated (despite probably not being the best way to do it) I added the unicode-symbol ♩ into my encoding.
 
 Within measure 3, there are two aspects that should be a little bit different: 
 
