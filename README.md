@@ -20,16 +20,16 @@ Learning the basics such as how to place notes, arrange chords and adding accide
 
 **After (using @vo):**
 
-<img width="274" height="146" alt="image" src="https://github.com/user-attachments/assets/d687223c-57e8-46ef-a804-7dbc0f883307" />
+<img width="274" height="146" alt="image" src="pictures/MEIpictures/2After_vo.png" />
 
 Another interesting aspect of MEI that I've discovered is the usage of either the @tie attribute or the `<slur>` element. From my point of view, I figured that @tie is very useful in situations like this:
 
-<img width="429" height="137" alt="image" src="https://github.com/user-attachments/assets/8a9dbd81-29c2-4538-81ea-54a62e8fa5b6" />
+<img width="429" height="137" alt="image" src="pictures/MEIpictures/3tie.png" />
 
 Here, the same pitch is being held across multiple notes.
 Whereas in other situations like this:
 
-<img width="471" height="142" alt="image" src="https://github.com/user-attachments/assets/05113b07-315d-4a1c-ac46-49ce44487819" />
+<img width="471" height="142" alt="image" src="pictures/MEIpictures/4tie.png" />
 
 connecting the highest notes of the chords has to be done with a `<slur>` element. 
 Also, in Chapter _4.3.2 Ties, Slurs and Phrase Marks_ of the Guidelines, there is explained that slur can also be encoded as an attribute. However, I did not really try that in my encoding because I was already kind of used to creating slurs as elements.
@@ -53,11 +53,11 @@ At the beginning of the piece, the tempo reads _Sehr langsam (𝅘𝅥)_. Thus I tri
 
 **How I tried to encode the quarter note symbol at first:**
 
-<img width="589" height="97" alt="image" src="https://github.com/user-attachments/assets/49408edf-fd2a-4674-8428-a6f3c26c2741" />
+<img width="589" height="97" alt="image" src="pictures/MEIpictures/5code.png" />
 
 **The result of that in Verovio:**
 
-<img width="127" height="47" alt="image" src="https://github.com/user-attachments/assets/d29d6e32-65ae-42e3-b2ab-86516c30b266" />
+<img width="127" height="47" alt="image" src=""pictures/MEIpictures/6langsam.png" />
 
 I couldn't figure out how to adjust the size of the note symbol. By looking up the valid attributes for `<symbol>`, I found the @scale attribute but adding that did not change the rendered version in Verovio. 
 In order to at least have the symbol integrated (despite probably not being the best way to do it) I added the unicode-symbol 𝅘𝅥 into my encoding.
@@ -70,11 +70,11 @@ Within measure 3, there are two aspects that should be a little bit different:
 
 When I set the rendering mode to _Automatic_, it does get rendered (see the blue slur in the picture):
 
-<img width="600" height="381" alt="image" src="https://github.com/user-attachments/assets/93ef85f1-6aa9-4496-ba05-86d2513e354e" />
+<img width="600" height="381" alt="image" src=""pictures/MEIpictures/7renderer.png" />
 
 But when setting it to _System and page_ (that's the view I had set for nearly the entire time when encoding the piece):
 
-<img width="910" height="506" alt="Screenshot 2026-01-26 231111" src="https://github.com/user-attachments/assets/5ee1e6a6-a8a9-4d65-99c1-f7c585d39bd7" />
+<img width="910" height="506" alt="Screenshot 2026-01-26 231111" src="pictures/MEIpictures/8renderer.png" />
 
 The second half of the slur is gone; I tried googling and finding something in the guidelines but I couldn't figure out how to solve this. I am pretty sure that we've already stumbled across that problem during the course itself... 
 
@@ -82,11 +82,11 @@ Implementing the @accid.ges attribute inside of `<note>` elements where it was n
 
 **Without @accid.ges in the 2nd c-sharp:**
 
-<img width="329" height="199" alt="image" src="https://github.com/user-attachments/assets/10a868f1-571b-49f2-b35a-8cf39a978362" />
+<img width="329" height="199" alt="image" src="pictures/MEIpictures/9accid.png" />
 
 **With @accid.ges added to the 2nd c-sharp:**
 
-<img width="311" height="213" alt="image" src="https://github.com/user-attachments/assets/570e6b99-bec6-4bed-bc21-a5f2637a40af" />
+<img width="311" height="213" alt="image" src="pictures/MEIpictures/10accid.png" />
 
 It might have something to do with the fact that both these notes are embedded within `<beam>` elements but other than that, I have no clue why that happens or whether that might be a rendering issue.
 
