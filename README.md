@@ -166,6 +166,26 @@ It might have something to do with the fact that both these notes are embedded w
 
 Within the two latest pictures, you can already spot another issue I faced concerning the rendering of clefs. This we also discussed earlier in the course but even several weeks later, I still couldn't figure out how to solve the issue that the bass clef in the 2nd staff disappears when the third staff is being implemented. After splitting the score into two `<mDiv>`s (which we thought could be the solution) the problem still existed. I've uploaded a file *mDivSchoenberg.mei* (that was at a much earlier state of my encoding) in which I tried to divide the score with two `<mDiv>` elements but I am not sure whether that was the right way to do it because when the second `<mDiv>` should start, it does not even get rendered... I tried switching up the @type attribute with @label but that did not help either. Moreover, probably due to the implementation of the third staff, the encoded @brace in `<grpSym>` (within `<staffGrp>`) is only being rendered partially starting from measure 7.
 
+Looking at the second staff in measure 8, the f-sharp should not be part of the chord. I tried encoding it onto a separate layer (like I did with the g-note it leads to) but it did not work because it is within a triplet and so adding a `<space>` element would not make it appear at the right time. 
+
+**How it looks in my encoding:**
+```{=latex}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{pictures/MEIpictures/14fsharp.png}
+\caption{C-sharp with @accid.ges}
+\end{figure}
+```
+
+**How it should look:**
+```{=latex}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{pictures/MEIpictures/15fsharp.png}
+\caption{C-sharp with @accid.ges}
+\end{figure}
+```
+
 Furthermore, there are aspects of the visual appearance that need to be addressed at some point such as the engraving style and the general typography.
 - What does not work and why? Compare comments in the mei-document
 - What did I try to fix it?
