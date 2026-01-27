@@ -278,7 +278,7 @@
                </section>
             </score>
          </mdiv>
-         <mdiv xml:id="m3rzh3d" label="threeLines">
+         <mdiv xml:id="m3rzh3d" type="threeLines">
             <score xml:id="sl47l601">
                <scoreDef xml:id="sm9bk2q2">
                   <staffGrp xml:id="si4cl0r2">
