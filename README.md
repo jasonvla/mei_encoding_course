@@ -18,7 +18,7 @@ This file was an attempt of mine to split the score into two separate `<mDiv>` e
 
 ## SchoenbergEncoding.mei
 
-This file is my final encoded version.
+This file is my encoding result.
 
 
 (Disclaimer: **I did not use any kind of AI for the encoding**. During the last lecture, I tried a few prompts and the results were not good at all. So I decided to not include it into my workflow at all, solely relying on the Guidelines and the things we've learned during the course.)
@@ -95,13 +95,13 @@ Whereas in other situations like this:
 ```
 
 connecting the highest notes of the chords has to be done with a `<slur>` element. 
-Also, in Chapter _4.3.2 (Ties, Slurs and Phrase Marks)_ of the Guidelines, there is explained that slur can also be encoded as an attribute. However, I did not really try that in my encoding because I was already kind of used to creating slurs as elements.
+Also, in Chapter _4.3.2 (Ties, Slurs and Phrase Marks)_ of the Guidelines, there is explained that slur can also be encoded as an attribute. However, I did not really do that in my encoding because I was already kind of used to creating slurs as elements.
 
-During the course, we already figured that using @tstamp and @tstamp2 instead of @startid and @endid in a <slur> element creates a different slur. In most of my cases, I went with the id-approach because oftentimes a more "tight" connection of the slur was needed. 
+During the course, we already figured that using @tstamp and @tstamp2 instead of @startid and @endid in a `<slur>` element has an impact on the visualization. In most of my cases, I went with the ID-approach because oftentimes a more "tight" connection of the slur was needed. 
 
 Placing accents with an `<artic>` element within the `<note>` element was very convenient and by adding a @place to it, defining the location also worked out fine.
 
-Furthermore, encoding that accidentals stay the same despite not explicitly written (like the f sharp in measure 1) has to be done with the @accid.ges attribute within a `<note>` element. 
+Furthermore, encoding that accidentals stay the same despite not explicitly written (like the f-sharp in measure 1) has to be done with the @accid.ges attribute within a `<note>` element. 
 
 One thing confused me when I looked up Chapter *4.2.5.2.1 (Chords in CMN)* of the MEI Guidelines: In the according example, there is a C-sharp minor excerpt (*Figure 12*) and directly below it, there is an excerpt of the encoding (*Listing 133*). I do not understand, why adding @accid.ges is needed for notes that are already sharp by definition due to the key signature of C-sharp such as C or G...
 
@@ -111,7 +111,7 @@ In addition to that, adding metadata within the `<meiHead>` also worked out fine
 
 # Problems
 
-(Disclaimer: Every issue I am referring to is also mentioned/explained in comments within the MEI-file itself.)
+(Disclaimer: The problems I am referring to are also mentioned in comments within the MEI-file itself.)
 
 
 At the beginning of the piece, the tempo reads _Sehr langsam (♩)_. Thus I tried to render this quarter note symbol ♩ by adding a `<dir>` element and a `<symbol>` element within it:
@@ -186,7 +186,7 @@ Implementing the @accid.ges attribute inside of `<note>` elements where it was n
 ```
 It might have something to do with the fact that both these notes are embedded within `<beam>` elements but other than that, I have no clue why that happens or whether that might be a rendering issue.
 
-Within the two latest pictures, you can already spot another issue I faced concerning the rendering of clefs. This we also discussed earlier in the course but even several weeks later, I still couldn't figure out how to solve the issue that the bass clef in the 2nd staff disappears when the third staff is being implemented. After splitting the score into two `<mDiv>`s (which we thought could be the solution) the problem still existed. I've uploaded a file *mDivSchoenberg.mei* (that was at a much earlier state of my encoding) in which I tried to divide the score with two `<mDiv>` elements but I am not sure whether that was the right way to do it because when the second `<mDiv>` should start, it does not even get rendered... I tried switching up the @type attribute with @label but that did not help either. Moreover, probably due to the implementation of the third staff, the encoded @brace in `<grpSym>` (within `<staffGrp>`) is only being rendered partially starting from measure 7.
+Within the two latest pictures, you can already spot another issue I faced concerning the rendering of clefs. This we also discussed earlier in the course but even several weeks later, I still couldn't figure out how to solve the issue that the bass clef in the 2nd staff disappears when the third staff is being implemented. After splitting the score into two `<mDiv>`s (which we thought could be the solution) the problem still existed. I've uploaded the file *mDivSchoenberg.mei* (that was at a much earlier state of my encoding) in which I tried to divide the score with two `<mDiv>` elements but I am not sure whether that was the right way to do it because when the second `<mDiv>` should start, it does not even get rendered... I tried switching up the @type attribute with @label but that did not help either. Moreover, probably due to the implementation of the third staff, the encoded @brace in `<grpSym>` (within `<staffGrp>`) is only being rendered partially starting from measure 7.
 
 Looking at the second staff in measure 8, the f-sharp should not be part of the chord. I tried encoding it onto a separate layer (like I did with the g-note it leads to) but it did not work because it is within a triplet and so adding a `<space>` element would not make it appear at the right time. 
 
@@ -208,4 +208,12 @@ Looking at the second staff in measure 8, the f-sharp should not be part of the 
 \end{figure}
 ```
 
-Furthermore, there are aspects of the visual appearance that need to be addressed at some point such as the engraving style and the general typography.
+Furthermore, there are aspects of the visual appearance that need to be addressed at some point such as the engraving style and the general typography. In Chapter 9.2.2 (Text Rendition) of the Guidelines, it is explained that the font of text is changeable. However, I tried to change the font by adding a `<rend>` element withn the `<dir>` element.
+
+```{=latex}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{pictures/MEIpictures/16code.png}
+\caption{Measure 7: Code of text directive "mit sehr zartem Ausdruck"}
+\end{figure}
+```
