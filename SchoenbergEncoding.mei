@@ -17,7 +17,7 @@
       </fileDesc>
       <encodingDesc xml:id="ene70d11">
          <appInfo xml:id="apfa2fu1">
-            <application xml:id="a93k00a1" enddate="2026-01-25T23:15:28" startdate="2026-01-17T13:31:37" version="1.2.9">
+            <application xml:id="a93k00a1" enddate="2026-01-27T23:00:47" startdate="2026-01-17T13:31:37" version="1.2.9">
                <name xml:id="na5umek2">mei-friend</name>
                <p xml:id="p8koykw1">First edit by mei-friend 1.2.9.</p>
             </application>
@@ -135,6 +135,7 @@
                    </chord>
                 </layer>
               </staff>
+               <!--ADDING DYNAMICS, TIES AND HAIRPIN TO MEASURE 3-->
                <dynam xml:id="d6t7rov2" ho="-13" layer="1" place="above" staff="2" tstamp="3" vo="-8">pppp</dynam>
                <dynam xml:id="d78756f" layer="1" place="within" staff="1" tstamp="3">p</dynam>
                <hairpin xml:id="holvpuy2" form="cres" place="below" staff="1" tstamp="3" tstamp2="5"/>
@@ -186,8 +187,8 @@
                <dynam xml:id="doppf291" endid="nnq7s7u1" ho="-3" place="within" startid="nnq7s7u1" vo="5">pppp</dynam>
                <dynam xml:id="ds90e4m2" endid="c60da65" startid="c60da65">pp</dynam>
                <dynam xml:id="dtpuchc" startid="n0bssxg1">p</dynam>
-               <slur xml:id="smiqhsy1" curvedir="above" endid="nnq7s7u1" startid="nixozt51"/> <!--Why does this slur only render in some rendering settings?-->
-            </measure>
+               <slur xml:id="smiqhsy1" curvedir="above" endid="nnq7s7u1" startid="nixozt51"/> <!--Why does this slur only appear in some rendering settings?-->
+             </measure>
             <measure xml:id="mdqmpta" n="5">
                   <staff xml:id="s7vx2131" n="1">
                 <layer xml:id="lu6rvzt2" n="1">
@@ -227,7 +228,8 @@
                        </chord>
                      </layer>
                   </staff>
-               <pedal xml:id="pddbbld" dir="down" startid="ccvuehe1"/> <!-- Should we add pedal with ID or timestamp?-->
+                <!--ADDING PEDAL TO MEASURE 5-->
+               <pedal xml:id="pddbbld" dir="down" startid="ccvuehe1"/>
               </measure>
               <measure xml:id="mklmsq51" n="6">
                 <staff xml:id="s1mhyk6" n="1">
@@ -251,6 +253,7 @@
                      <note xml:id="nouu9fs1" accid="s" dots="1" dur="2" fermata="above" oct="3" pname="f" stem.dir="up"/>
                   </layer>
                 </staff>
+                 <!--ADDING DYNAMICS, SLURS, HAIRPINS AND PEDAL TO MEASURE 6-->
                  <hairpin xml:id="h4bj0au2" form="dim" layer="1" staff="1" tstamp="1" tstamp2="3"/>
                  <slur xml:id="swac6xt1" curvedir="above" endid="n0lgrrv2" startid="nbzn08o2"/>
                  <dynam xml:id="dpvwgoj2" staff="1" tstamp="3" tstamp2="4">ppp</dynam>
@@ -286,13 +289,14 @@
                       <rest xml:id="rwfdbjl1" dur="1"/>
                    </layer>
                 </staff>
+                 <!--ADDING DYNAMICS AND SLURS TO MEASURE 7-->
                  <dynam xml:id="dy2n8ow2" startid="npc6i4v2">p</dynam>
                  <slur xml:id="svzgvww2" endid="nlhbhiq2" startid="npc6i4v2"/>
-                 <dir xml:id="dr5mfap1" place="below" staff="2" tstamp="0" vo="-3" ho="8">mit sehr zartem Ausdruck</dir> <!-- Font + Size smaller-->
+                 <dir xml:id="dr5mfap1" place="below" staff="2" tstamp="0" vo="-3" ho="8">mit sehr zartem Ausdruck</dir> <!-- Font should be different + Size should be smaller-->
                  <hairpin xml:id="hhs8qwo2" endid="nlgt7hh1" form="cres" startid="npc6i4v2"/>
                  <hairpin xml:id="h30kks4" endid="ntq10781" form="dim" staff="1" startid="ngnmeik2"/> <!--despite using IDs, we can add the @staff to determine in what staff the hairpin should appear!-->
                  <hairpin xml:id="h8camre" endid="n7frzop2" form="cres" startid="ntq10781"/>
-                 <hairpin xml:id="hp98j7" endid="nlhbhiq2" form="dim" startid="n7frzop2"/> <!--How to give these forks a bit more distance?-->
+                 <hairpin xml:id="hp98j7" endid="nlhbhiq2" form="dim" startid="n7frzop2"/>
              </measure>
              <measure xml:id="mmznkja" n="8">
                 <staff xml:id="sm2yam4" n="1">
@@ -317,7 +321,7 @@
                 </layer>
                 <layer xml:id="lhltcxe1" n="2">
                    <tuplet xml:id="t4tsmpi1" bracket.place="above" bracket.visible="true" dur="4" num="3" num.visible="true">
-                      <rest xml:id="su7y8s91" dur="8"/> <!-- How to make it so that only one rest appears but the triplet is not moved-->
+                      <rest xml:id="su7y8s91" dur="8"/>
                       <beam xml:id="bmq6c1u2">
                       <note xml:id="n0nuzje1" accid="n" dur="8" pname="e" stem.dir="down"/>
                       <note xml:id="n8flw7u2" accid="f" dur="8" pname="e" stem.dir="down"/>
@@ -353,7 +357,8 @@
                       <rest xml:id="rexokof" dur="1"/>
                    </layer>
                 </staff>
-                <dir xml:id="di53jcx2" startid="nhyufc3">genau im Takt</dir>
+                 <!--ADDING DYNAMICS, SLURS AND TEXT DIRECTIVE TO MEASURE 8-->
+                <dir xml:id="di53jcx2" startid="nhyufc3">genau im Takt</dir> <!--Font should be different-->
                 <slur xml:id="sxtz9or2" curvedir="below" endid="nalkcvf" startid="n4wevxl2"/>
                 <slur xml:id="stkp2qq1" curvedir="below" endid="nsexvgy1" startid="n8flw7u2"/>
                 <dynam xml:id="dhf3z6e" startid="n0nuzje1">pp</dynam>
@@ -389,9 +394,10 @@
                       </beam>
                    </layer>
                 </staff>
+                <!--ADDING DYNAMICS, SLURS AND TEXT DIRECTIVE TO MEASURE 9-->
                 <dynam xml:id="drf18qs2" startid="#njq7cu6">ppp</dynam>
                 <dynam xml:id="d6677xv1" startid="n4hfkxn2" ho="-3">pppp</dynam>
-                <dir xml:id="dgo8mvi1" staff="2" tstamp="0.5" vo="-3" ho="3">wie ein Hauch</dir>
+                <dir xml:id="dgo8mvi1" staff="2" tstamp="0.5" vo="-3" ho="3">wie ein Hauch</dir> <!-- Font should be different -->
                 <slur xml:id="sfokvgy1" endid="nh2zetv1" startid="n4hfkxn2"/>
              </measure>
           </section>
