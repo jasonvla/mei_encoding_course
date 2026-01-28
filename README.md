@@ -208,8 +208,9 @@ Looking at the second staff in measure 8, the f-sharp should not be part of the 
 \end{figure}
 ```
 
-Furthermore, there are aspects of the visual appearance that need to be addressed at some point such as the engraving style and the general typography. In Chapter 9.2.2 (Text Rendition) of the Guidelines, it is explained that the font of text is changeable. However, I tried to change the font by adding a `<rend>` element withn the `<dir>` element.
+Furthermore, there are aspects of the visual appearance that need to be addressed at some point such as the engraving style and the general typography. In Chapter 9.2.2 (Text Rendition) of the Guidelines, it is explained that the font of text is changeable. However, I tried to change the font by adding a `<rend>` element withn the `<dir>` element but that did not work out:
 
+How  I tried to encode it:
 ```{=latex}
 \begin{figure}[H]
 \centering
@@ -217,3 +218,26 @@ Furthermore, there are aspects of the visual appearance that need to be addresse
 \caption{Measure 7: Code of text directive "mit sehr zartem Ausdruck"}
 \end{figure}
 ```
+
+The result of that in Verovio:
+
+```{=latex}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{pictures/MEIpictures/17text.png}
+\caption{Measure 7: Text directive "mit sehr zartem Ausdruck" in my encoding}
+\end{figure}
+```
+
+How it should look:
+
+```{=latex}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{pictures/MEIpictures/18text.png}
+\caption{Measure 7: How the text directive "mit sehr zartem Ausdruck" should look}
+\end{figure}
+```
+
+
+The same issue applies to the other directives in measure 8 and 9. 
