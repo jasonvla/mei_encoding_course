@@ -1,6 +1,7 @@
 ---
 header-includes: 
 - \usepackage{float}
+- \usepackage{graphicx}
 fontsize: 12pt
 geometry: margin=3cm
 ---
