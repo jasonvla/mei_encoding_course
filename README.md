@@ -55,7 +55,7 @@ Learning the basics such as how to place notes, arrange chords and adding accide
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\textwidth]{pictures/MEIpictures/1Before_v.png}
-\caption{Before adding @vo}
+\caption{Measure 4: Before adding @vo}
 \end{figure}
 ``` 
 <!-- 
@@ -69,7 +69,7 @@ Learning the basics such as how to place notes, arrange chords and adding accide
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\textwidth]{pictures/MEIpictures/2After_vo.png}
-\caption{After adding @vo}
+\caption{Measure 4: After adding @vo}
 \end{figure}
 ``` 
 
@@ -79,7 +79,7 @@ Another interesting aspect of MEI that I've discovered is the usage of either th
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\textwidth]{pictures/MEIpictures/3tie.png}
-\caption{Tie example}
+\caption{Measure 1: Tie example}
 \end{figure}
 ```
 
@@ -90,7 +90,7 @@ Whereas in other situations like this:
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\textwidth]{pictures/MEIpictures/4tie.png}
-\caption{Slur example}
+\caption{Measure 5: Slur example}
 \end{figure}
 ```
 
@@ -149,7 +149,7 @@ When I set the rendering mode to _Automatic_, it does get rendered (see the blue
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\textwidth]{pictures/MEIpictures/7renderer.png}
-\caption{Curving tie}
+\caption{Rendering mode: Automatic}
 \end{figure}
 ```
 But when setting it to _System and page_ (that's the view I had set for nearly the entire time when encoding the piece):
@@ -158,7 +158,7 @@ But when setting it to _System and page_ (that's the view I had set for nearly t
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\textwidth]{pictures/MEIpictures/8renderer.png}
-\caption{System and page mode}
+\caption{Rendering mode: System and page}
 \end{figure}
 ```
 The second half of the slur is gone; I tried googling and finding something in the guidelines but I couldn't figure out how to solve this. I am pretty sure that we've already stumbled across that problem during the course itself... 
@@ -193,7 +193,7 @@ Looking at the second staff in measure 8, the f-sharp should not be part of the 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\textwidth]{pictures/MEIpictures/14fsharp.png}
-\caption{M. 8; f-sharp in my encoding}
+\caption{Measure 8: f-sharp in my encoding}
 \end{figure}
 ```
 
@@ -202,7 +202,7 @@ Looking at the second staff in measure 8, the f-sharp should not be part of the 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\textwidth]{pictures/MEIpictures/15fsharp.png}
-\caption{M. 8; f-sharp in the reference sheet}
+\caption{Measure 8: f-sharp in the reference sheet}
 \end{figure}
 ```
 
