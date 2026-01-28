@@ -10,7 +10,7 @@ In this repository, I am presenting both my files and a report where I comment o
 
 ## Schoenberg_6Kleine_Klavierstuke_Op19.pdf
 
-The VI. sentence of this file was my reference file during the encoding process. It was accessed on IMSLP and has the following score ID: #316747. 
+The VI. movement was my reference file during the encoding process. It was accessed on IMSLP and has the following score ID: #316747. 
 
 ## mDivSchoenberg.mei
 
@@ -29,7 +29,7 @@ Throughout the encoding process with _mei-friend_, I mostly rendered the notatio
 ```{=latex}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\textwidth]{pictures/MEIpictures/13result.png}
+\includegraphics[width=1\textwidth]{pictures/MEIpictures/13result.png}
 \caption{Result}
 \end{figure}
 ```
@@ -186,7 +186,7 @@ Implementing the @accid.ges attribute inside of `<note>` elements where it was n
 ```
 It might have something to do with the fact that both these notes are embedded within `<beam>` elements but other than that, I have no clue why that happens or whether that might be a rendering issue.
 
-Within the two latest pictures, you can already spot another issue I faced concerning the rendering of clefs. This we also discussed earlier in the course but even several weeks later, I still couldn't figure out how to solve the issue that the bass clef in the 2nd staff disappears when the third staff is being implemented. After splitting the score into two `<mDiv>`s (which we thought could be the solution) the problem still existed. I've uploaded the file *mDivSchoenberg.mei* (that was at a much earlier state of my encoding) in which I tried to divide the score with two `<mDiv>` elements but I am not sure whether that was the right way to do it because when the second `<mDiv>` should start, it does not even get rendered... I tried switching up the @type attribute with @label but that did not help either. Moreover, probably due to the implementation of the third staff, the encoded @brace in `<grpSym>` (within `<staffGrp>`) is only being rendered partially starting from measure 7.
+Within the two latest figures, you can already spot another issue I faced concerning the rendering of clefs. We also discussed that earlier in the course but even several weeks later, I still couldn't figure out how to solve the issue that the bass clef in the 2nd staff disappears when the third staff is being implemented. After splitting the score into two `<mDiv>`s (which we thought could be the solution) the problem still existed. I've uploaded the file \textit{mDivSchoenberg.mei} (that was at a much earlier state of my encoding) in which I tried to divide the score with two `<mDiv>` elements but I am not sure whether that was the right way to do it because when the second `<mDiv>` should start, it does not even get rendered... I tried switching up the @type attribute with @label but that did not help either. Moreover, probably due to the implementation of the third staff, the encoded @brace in `<grpSym>` (within `<staffGrp>`) is only being rendered partially (starts to render from measure 7 on).
 
 Looking at the second staff in measure 8, the f-sharp should not be part of the chord. I tried encoding it onto a separate layer (like I did with the g-note it leads to) but it did not work because it is within a triplet and so adding a `<space>` element would not make it appear at the right time. 
 
@@ -208,8 +208,9 @@ Looking at the second staff in measure 8, the f-sharp should not be part of the 
 \end{figure}
 ```
 
-Furthermore, there are aspects of the visual appearance that need to be addressed at some point such as the engraving style and the general typography. In Chapter 9.2.2 (Text Rendition) of the Guidelines, it is explained that the font of text is changeable. However, I tried to change the font by adding a `<rend>` element withn the `<dir>` element.
+Furthermore, there are aspects of the visual appearance that need to be addressed at some point such as the engraving style and the general typography. In Chapter 9.2.2 (Text Rendition) of the Guidelines, it is explained that the font of text is changeable. However, I tried to change the fontstyle by adding a `<rend>` element withn the `<dir>` element but that did not work out:
 
+How  I tried to encode it:
 ```{=latex}
 \begin{figure}[H]
 \centering
@@ -217,3 +218,26 @@ Furthermore, there are aspects of the visual appearance that need to be addresse
 \caption{Measure 7: Code of text directive "mit sehr zartem Ausdruck"}
 \end{figure}
 ```
+
+The result of that in Verovio:
+
+```{=latex}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{pictures/MEIpictures/17text.png}
+\caption{Measure 7: Text directive "mit sehr zartem Ausdruck" in my encoding}
+\end{figure}
+```
+
+How it should look:
+
+```{=latex}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{pictures/MEIpictures/18text.png}
+\caption{Measure 7: How the text directive "mit sehr zartem Ausdruck" should look}
+\end{figure}
+```
+
+
+The same issue applies to the other directives in measure 8 and 9. The font itself looks identical (I assume both fonts are Times New Roman) but in Fig. 16, it is way thicker than in my version. Changing @fontstyle within `<rend>` did not change anything in the rendering itself.
