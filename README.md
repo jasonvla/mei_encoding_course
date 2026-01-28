@@ -137,11 +137,13 @@ At the beginning of the piece, the tempo reads _Sehr langsam (♩)_. Thus I trie
 I couldn't figure out how to adjust the size of the note symbol. By looking up the valid attributes for `<symbol>`, I found the @scale attribute but adding that did not change the rendered version in Verovio. 
 In order to at least have the symbol integrated (despite probably not being the best way to do it) I added the unicode-symbol ♩ into my encoding.
 
-Within measure 3, there are two aspects that should be a little bit different: 
+Within measure 3, there are a couple of aspects that should are not right yet: 
 
 **Firstly**, the curving of the tie on the d-sharp in the first staff should be not that "flat", a little bit more round (compare the reference sheet). Replacing the `<tie>` element with a `<slur>` did not help at all, in fact it even made the positioning worse.
 
-**Secondly**, looking at the high d-sharp within the 2nd staff; I encoded a `<slur>` with @startid and @endid where the starting note is the mentioned high d-sharp (staff 2, measure 3) and the ending note is the other high d-sharp (staff 2, measure 4). Despite that, the first half of the slur is not getting rendered sometimes.
+**Secondly**, the direction of the tie on the `a` within the first staff should be below and not above; I tried replacing the @tie with a `<slur>` element and adding the `a`-note in measure 3 as @startid and the `a`-note in measure 4 as @endid but by doing so, the slur only appeared at the start of measure 4.
+
+**Thirdly**, looking at the high d-sharp within the 2nd staff; I encoded a `<slur>` with @startid and @endid where the starting note is the mentioned high `d-sharp` (staff 2, measure 3) and the ending note is the other high `d-sharp` (staff 2, measure 4). Despite that, the first half of the slur is not getting rendered sometimes.
 
 When I set the rendering mode to _Automatic_, it does get rendered (see the blue slur in the picture):
 
