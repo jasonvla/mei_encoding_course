@@ -6,7 +6,7 @@ fontsize: 12pt
 geometry: margin=3cm
 ---
 # Report
-In this repository, I am presenting both my files and a report where I comment on what worked out and what did not. In the .md version, the images are embedded in LaTeX in order to make them appear in the pdf-version. I didn't figure out yet how to make the photos appear simultaneosly in the .md and the pandoc generated .pdf file.
+In this repository, I am presenting both my files and a report where I comment on what worked out and what did not. In the .md version, the images are embedded in LaTeX in order to make them appear in the pdf-version. I didn't figure out yet how to make the photos appear simultaneosly in the .md and the pandoc generated .pdf file while not messing up the formatting. I am sorry for that!
 
 ## Schoenberg_6Kleine_Klavierstuke_Op19.pdf
 
