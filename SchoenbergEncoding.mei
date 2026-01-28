@@ -12,8 +12,20 @@
                <persName xml:id="pema7q21" role="encoder">Jason Ackermann</persName>
             </respStmt>
          </titleStmt>
+         <editionStmt>
+            <edition>Reprint of the first edition.</edition>
+         </editionStmt>
+         <extent unit="byte">23600</extent>
          <pubStmt xml:id="ptt7px7">
-            <unpub xml:id="uwwf84p1"/>
+            <date>1999 (First edition: 1913)</date>
+            <publisher>Mineola: Dover Publications (First edition Vienna: Universal Edition)</publisher>
+            <address>
+               <country>United States of America</country>
+               <region>New York</region>
+               <settlement>Garden City</settlement>
+               <street>1325 Franklin Ave, Ste 250</street>
+               <postCode>11530</postCode>
+            </address>
          </pubStmt>
       </fileDesc>
       <encodingDesc xml:id="ene70d11">
@@ -109,7 +121,7 @@
               <staff xml:id="s1wcgw1" n="1">
                 <layer xml:id="lrfgtgw2" n="1">
                      <chord xml:id="cfitw4x1">
-                        <note xml:id="nxnepmq1" dur="1" oct="4" pname="a" tie="m"/> <!--Why is the curve direction upwards ? -->
+                        <note xml:id="nxnepmq1" dur="1" oct="4" pname="a" tie="m"/> <!--The curve direction should be downwards (below)-->
                         <note xml:id="nu54qac1" accid.ges="s" dur="1" oct="5" pname="f" tie="m"/>
                         <note xml:id="njm51mb" dur="1" oct="5" pname="b" tie="m"/>
                      </chord>
