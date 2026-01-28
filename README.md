@@ -1,18 +1,38 @@
 ---
 header-includes: 
 - \usepackage{float}
+- \usepackage{graphicx}
 fontsize: 12pt
 geometry: margin=3cm
 ---
 # Report
-In this repository, I am presenting both my files and a report where I comment on what worked out and what did not.
+In this repository, I am presenting both my files and a report where I comment on what worked out and what did not. In the .md version, the images are embedded in LaTeX in order to make them appear in the pdf-version. I didn't figure out yet how to make the photos appear simultaneosly in the .md and the pandoc generated .pdf file while not messing up the formatting. I am sorry for that!
+
+## Schoenberg_6Kleine_Klavierstuke_Op19.pdf
+
+The VI. sentence of this file was my reference file during the encoding process. It was accessed on IMSLP and has the following score ID: #316747. 
+
+## mDivSchoenberg.mei
+
+This file was an attempt of mine to split the score into two separate `<mDiv>` elements in order to tackle a rendering problem with the additional third staff starting from measure 7. It also will be discussed later on.
+
+## SchoenbergEncoding.mei
+
+This file is my final encoded version.
+
 
 (Disclaimer: **I did not use any kind of AI for the encoding**. During the last lecture, I tried a few prompts and the results were not good at all. So I decided to not include it into my workflow at all, solely relying on the Guidelines and the things we've learned during the course.)
 Throughout the encoding process with _mei-friend_, I mostly rendered the notation with the _System and page_-Layout.
 
 **Final product (visualized with the above-mentioned Layout):**
 
-![Result](pictures/MEIpictures/13result.png)
+```{=latex}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{pictures/MEIpictures/13result.png}
+\caption{Result}
+\end{figure}
+```
 
 # Motivation
 
@@ -35,7 +55,7 @@ Learning the basics such as how to place notes, arrange chords and adding accide
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\textwidth]{pictures/MEIpictures/1Before_v.png}
-\caption{Before adding @vo}
+\caption{Measure 4: Before adding @vo}
 \end{figure}
 ``` 
 <!-- 
@@ -49,7 +69,7 @@ Learning the basics such as how to place notes, arrange chords and adding accide
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\textwidth]{pictures/MEIpictures/2After_vo.png}
-\caption{After adding @vo}
+\caption{Measure 4: After adding @vo}
 \end{figure}
 ``` 
 
@@ -59,7 +79,7 @@ Another interesting aspect of MEI that I've discovered is the usage of either th
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\textwidth]{pictures/MEIpictures/3tie.png}
-\caption{Tie example}
+\caption{Measure 1: Tie example}
 \end{figure}
 ```
 
@@ -70,7 +90,7 @@ Whereas in other situations like this:
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\textwidth]{pictures/MEIpictures/4tie.png}
-\caption{Slur example}
+\caption{Measure 5: Slur example}
 \end{figure}
 ```
 
@@ -117,11 +137,13 @@ At the beginning of the piece, the tempo reads _Sehr langsam (♩)_. Thus I trie
 I couldn't figure out how to adjust the size of the note symbol. By looking up the valid attributes for `<symbol>`, I found the @scale attribute but adding that did not change the rendered version in Verovio. 
 In order to at least have the symbol integrated (despite probably not being the best way to do it) I added the unicode-symbol ♩ into my encoding.
 
-Within measure 3, there are two aspects that should be a little bit different: 
+Within measure 3, there are a couple of aspects that should are not right yet: 
 
 **Firstly**, the curving of the tie on the d-sharp in the first staff should be not that "flat", a little bit more round (compare the reference sheet). Replacing the `<tie>` element with a `<slur>` did not help at all, in fact it even made the positioning worse.
 
-**Secondly**, looking at the high d-sharp within the 2nd staff; I encoded a `<slur>` with @startid and @endid where the starting note is the mentioned high d-sharp (staff 2, measure 3) and the ending note is the other high d-sharp (staff 2, measure 4). Despite that, the first half of the slur is not getting rendered sometimes.
+**Secondly**, the direction of the tie on the a-note within the first staff should be below and not above; I tried replacing the @tie with a `<slur>` element and therefore adding the a-note in measure 3 as @startid and the a-note in measure 4 as @endid but by doing so, the slur only appeared at the start of measure 4.
+
+**Thirdly**, looking at the high d-sharp within the 2nd staff; I encoded a `<slur>` with @startid and @endid where the starting note is the mentioned high d-sharp (staff 2, measure 3) and the ending note is the other high d-sharp (staff 2, measure 4). Despite that, the first half of the slur is not getting rendered sometimes.
 
 When I set the rendering mode to _Automatic_, it does get rendered (see the blue slur in the picture):
 
@@ -129,7 +151,7 @@ When I set the rendering mode to _Automatic_, it does get rendered (see the blue
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\textwidth]{pictures/MEIpictures/7renderer.png}
-\caption{Curving tie}
+\caption{Rendering mode: Automatic}
 \end{figure}
 ```
 But when setting it to _System and page_ (that's the view I had set for nearly the entire time when encoding the piece):
@@ -138,7 +160,7 @@ But when setting it to _System and page_ (that's the view I had set for nearly t
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\textwidth]{pictures/MEIpictures/8renderer.png}
-\caption{System and page mode}
+\caption{Rendering mode: System and page}
 \end{figure}
 ```
 The second half of the slur is gone; I tried googling and finding something in the guidelines but I couldn't figure out how to solve this. I am pretty sure that we've already stumbled across that problem during the course itself... 
@@ -173,7 +195,7 @@ Looking at the second staff in measure 8, the f-sharp should not be part of the 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\textwidth]{pictures/MEIpictures/14fsharp.png}
-\caption{M. 8; f-sharp in my encoding}
+\caption{Measure 8: f-sharp in my encoding}
 \end{figure}
 ```
 
@@ -182,7 +204,7 @@ Looking at the second staff in measure 8, the f-sharp should not be part of the 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\textwidth]{pictures/MEIpictures/15fsharp.png}
-\caption{M. 8; f-sharp in the reference sheet}
+\caption{Measure 8: f-sharp in the reference sheet}
 \end{figure}
 ```
 
