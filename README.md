@@ -5,7 +5,7 @@ fontsize: 12pt
 geometry: margin=3cm
 ---
 # Report
-In this repository, I am presenting both my files and a report where I comment on what worked out and what did not.
+In this repository, I am presenting both my files and a report where I comment on what worked out and what did not. In the .md version, the images are embedded in LaTeX in order to make them appear in the pdf-version. I didn't figure out yet how to make the photos appear simultaneosly in the .md and the pandoc generated .pdf file.
 
 ## Schoenberg_6Kleine_Klavierstuke_Op19.pdf
 
@@ -25,7 +25,13 @@ Throughout the encoding process with _mei-friend_, I mostly rendered the notatio
 
 **Final product (visualized with the above-mentioned Layout):**
 
-![Result](pictures/MEIpictures/13result.png)
+```{=latex}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{pictures/MEIpictures/13result.png}
+\caption{Result}
+\end{figure}
+```
 
 # Motivation
 
