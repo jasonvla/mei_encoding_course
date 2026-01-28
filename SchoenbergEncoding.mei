@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://music-encoding.org/schema/5.1/mei-CMN.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://music-encoding.org/schema/5.1/mei-CMN.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><mei xml:id="m7gzb4u2" meiversion="5.1" xmlns="http://www.music-encoding.org/ns/mei">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://music-encoding.org/schema/5.1/mei-CMN.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://music-encoding.org/schema/5.1/mei-CMN.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<mei xml:id="m7gzb4u2" meiversion="5.1" xmlns="http://www.music-encoding.org/ns/mei">
    <meiHead xml:id="mssfwmb">
       <fileDesc xml:id="f95l8mi2">
          <titleStmt xml:id="tiz524l1">
@@ -139,7 +140,7 @@
                <dynam xml:id="d6t7rov2" ho="-13" layer="1" place="above" staff="2" tstamp="3" vo="-8">pppp</dynam>
                <dynam xml:id="d78756f" layer="1" place="within" staff="1" tstamp="3">p</dynam>
                <hairpin xml:id="holvpuy2" form="cres" place="below" staff="1" tstamp="3" tstamp2="5"/>
-               <tie xml:id="s2yfupd" curvedir="below" startid="nro5f2x1" endid="nx2i61e" vo="-2"/>
+               <tie xml:id="s2yfupd" curvedir="below" startid="nro5f2x1" endid="nx2i61e" vo="-2"/> <!--When putting this tie to the end of measure 4, the first half of the slur disappears in the System and page-layout-->
             </measure>
              <sb xml:id="skcnl9m2"/>
             <measure xml:id="m12unov2" n="4">
@@ -292,7 +293,11 @@
                  <!--ADDING DYNAMICS AND SLURS TO MEASURE 7-->
                  <dynam xml:id="dy2n8ow2" startid="npc6i4v2">p</dynam>
                  <slur xml:id="svzgvww2" endid="nlhbhiq2" startid="npc6i4v2"/>
-                 <dir xml:id="dr5mfap1" place="below" staff="2" tstamp="0" vo="-3" ho="8">mit sehr zartem Ausdruck</dir> <!-- Font should be different + Size should be smaller-->
+                 <dir xml:id="dr5mfap1" place="below" staff="2" tstamp="0" vo="-3" ho="8">
+                    <rend fontfam="TimesNewRomanPS-ItalicMT" fontstyle="italic">
+                       mit sehr zartem Ausdruck
+                    </rend>
+                 </dir> <!-- Font should be different + Size should be smaller-->
                  <hairpin xml:id="hhs8qwo2" endid="nlgt7hh1" form="cres" startid="npc6i4v2"/>
                  <hairpin xml:id="h30kks4" endid="ntq10781" form="dim" staff="1" startid="ngnmeik2"/> <!--despite using IDs, we can add the @staff to determine in what staff the hairpin should appear!-->
                  <hairpin xml:id="h8camre" endid="n7frzop2" form="cres" startid="ntq10781"/>
@@ -395,7 +400,7 @@
                    </layer>
                 </staff>
                 <!--ADDING DYNAMICS, SLURS AND TEXT DIRECTIVE TO MEASURE 9-->
-                <dynam xml:id="drf18qs2" startid="#njq7cu6">ppp</dynam>
+                <dynam xml:id="drf18qs2" startid="njq7cu6">ppp</dynam>
                 <dynam xml:id="d6677xv1" startid="n4hfkxn2" ho="-3">pppp</dynam>
                 <dir xml:id="dgo8mvi1" staff="2" tstamp="0.5" vo="-3" ho="3">wie ein Hauch</dir> <!-- Font should be different -->
                 <slur xml:id="sfokvgy1" endid="nh2zetv1" startid="n4hfkxn2"/>
