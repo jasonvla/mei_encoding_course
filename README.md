@@ -97,8 +97,9 @@ Furthermore, encoding that accidentals stay the same despite not explicitly writ
 
 One aspect confused me when I looked up Chapter *4.2.5.2.1 (Chords in CMN)* of the MEI Guidelines: In the according example, there is a C-sharp minor excerpt (*Figure 12*) and directly below it, there is an excerpt of the encoding (*Listing 133*). I do not understand, why (or if) adding @accid.ges is needed for notes that are already sharp by definition of the C-sharp minor key signature such as C or G...
 
+Looking at the first staff within measure 8; I was able to fix the issue I encountered during the course that an eighth-rest appeared for both layers within the tuplet. By replacing the `<rest>` element with a `<space>` element in one layer, only one rest is now being rendered now.
 
-In addition to that, adding metadata within the `<meiHead>` also worked out fine. However, the metadata-section was not my primary focus because I first wanted to learn how to properly encode the music itself before doing a deep-dive into aspects like adding metadata. Despite that, I tried to add as much metadata as possible without going into too much detail.
+Adding metadata within the `<meiHead>` also worked out fine. However, the metadata-section was not my primary focus because I first wanted to learn how to properly encode the music itself before doing a deep-dive into aspects like adding metadata. Despite that, I tried to add as much metadata as possible without going into too much detail.
 
 
 # Problems
