@@ -236,3 +236,10 @@ How it should look:
 The same issue applies to the other directives in measure 8 and 9. The font itself looks identical (I assume both fonts are Times New Roman) but in Fig. 16, it is way thicker than in my version. Adjusting @fontstyle within `<rend>` did not change anything in the rendering itself.
 
 As of right now, I hope that this report helps to see both the encoding skills I've picked up during the course and the aspects I am currently struggling with. Despite the encoding being absolutely not perfect, I think that I've deepened my understanding of MEI in a way where I am now able to read .mei files without being overwhelmed or confused at all. Furthermore, I think the course and this assignment enabled me to pick up many more concepts of MEI through self-study but as I've shown in the Problems-section, there still is a lot of work to do in order to become more fluent, consistent and reliable in mei-encoding.
+
+## Next steps
+This is a short summary of how I would now continue with the encoding:
+
+Despite many open to-do's, I would highly prioritize confirming/testing the robustness of my encoding across different layouts (especially regarding the usage of @ho and @vo within certain elements such as `<dynam>`, `<pedal>` or `<clef>`). If it turns out that @ho and @vo are not a "good" way to adjust the positions of elements; I would certainly have to learn about another way to change positions.
+
+Moreover, obvious mistakes such as the missing bass-clef (2nd staff, measure 7) and the partially missing slurs and braces need to be fixed as soon as possible. Furthermore, aspects like the font- and engraving style need to be addressed as well as other layout-specific things like the exact amount of space each measure takes up. 
