@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://music-encoding.org/schema/5.1/mei-CMN.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://music-encoding.org/schema/5.1/mei-CMN.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<mei xml:id="m7gzb4u2" meiversion="5.1" xmlns="http://www.music-encoding.org/ns/mei">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://music-encoding.org/schema/5.1/mei-CMN.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://music-encoding.org/schema/5.1/mei-CMN.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><mei xml:id="m7gzb4u2" meiversion="5.1" xmlns="http://www.music-encoding.org/ns/mei">
    <meiHead xml:id="mssfwmb">
       <fileDesc xml:id="f95l8mi2">
          <titleStmt xml:id="tiz524l1">
@@ -12,25 +11,25 @@
                <persName xml:id="pema7q21" role="encoder">Jason Ackermann</persName>
             </respStmt>
          </titleStmt>
-         <editionStmt>
-            <edition>Reprint of the first edition.</edition>
+         <editionStmt xml:id="eewqtaw1">
+            <edition xml:id="ewuh9ou2">Reprint of the first edition.</edition>
          </editionStmt>
-         <extent unit="byte">23600</extent>
+         <extent xml:id="eqaz49h1" unit="byte">23600</extent>
          <pubStmt xml:id="ptt7px7">
-            <date>1999 (First edition: 1913)</date>
-            <publisher>Mineola: Dover Publications (First edition Vienna: Universal Edition)</publisher>
-            <address>
-               <country>United States of America</country>
-               <region>New York</region>
-               <settlement>Garden City</settlement>
-               <street>1325 Franklin Ave, Ste 250</street>
-               <postCode>11530</postCode>
+            <date xml:id="dj2xssm2">1999 (First edition: 1913)</date>
+            <publisher xml:id="pgkedn7">Mineola: Dover Publications (First edition Vienna: Universal Edition)</publisher>
+            <address xml:id="apj4rc4">
+               <country xml:id="c9jcyht1">United States of America</country>
+               <region xml:id="rugnkmn1">New York</region>
+               <settlement xml:id="s7lwtxm1">Garden City</settlement>
+               <street xml:id="sibu075">1325 Franklin Ave, Ste 250</street>
+               <postCode xml:id="p2u8lhb">11530</postCode>
             </address>
          </pubStmt>
       </fileDesc>
       <encodingDesc xml:id="ene70d11">
          <appInfo xml:id="apfa2fu1">
-            <application xml:id="a93k00a1" enddate="2026-01-27T23:00:47" startdate="2026-01-17T13:31:37" version="1.2.9">
+            <application xml:id="a93k00a1" enddate="2026-01-30T15:58:43" startdate="2026-01-17T13:31:37" version="1.2.9">
                <name xml:id="na5umek2">mei-friend</name>
                <p xml:id="p8koykw1">First edit by mei-friend 1.2.9.</p>
             </application>
@@ -45,7 +44,7 @@
             <staffGrp xml:id="s5db0wd1" bar.thru="true">
               <staffDef xml:id="s3anmz9" clef.line="2" clef.shape="G" lines="5" n="1"/>
                <staffDef xml:id="s0ih5v31" clef.line="4" clef.shape="F" lines="5" n="2"/>
-               <staffDef xml:id="sehgs691" clef.line="4" clef.shape="F" lines="5" n="3" visible="false"/>
+               <staffDef xml:id="sehgs691" clef.line="4" clef.shape="F" lines="5" n="3" visible="false"/> <!--Third staff is not visible at the beginning! That's why visible = "false"-->
               <!-- Next element encodes brace for piano notation -->
               <grpSym xml:id="ga47ahp1" symbol="brace"/>
             </staffGrp>
@@ -152,7 +151,7 @@
                <dynam xml:id="d6t7rov2" ho="-13" layer="1" place="above" staff="2" tstamp="3" vo="-8">pppp</dynam>
                <dynam xml:id="d78756f" layer="1" place="within" staff="1" tstamp="3">p</dynam>
                <hairpin xml:id="holvpuy2" form="cres" place="below" staff="1" tstamp="3" tstamp2="5"/>
-               <tie xml:id="s2yfupd" curvedir="below" startid="nro5f2x1" endid="nx2i61e" vo="-2"/> <!--When putting this tie to the end of measure 4, the first half of the slur disappears in the System and page-layout-->
+               <tie xml:id="s2yfupd" curvedir="below" endid="nx2i61e" startid="nro5f2x1" vo="-2"/> <!--When putting this tie to the end of measure 4, the first half of the slur disappears in the System and page-layout-->
             </measure>
              <sb xml:id="skcnl9m2"/>
             <measure xml:id="m12unov2" n="4">
@@ -305,8 +304,9 @@
                  <!--ADDING DYNAMICS AND SLURS TO MEASURE 7-->
                  <dynam xml:id="dy2n8ow2" startid="npc6i4v2">p</dynam>
                  <slur xml:id="svzgvww2" endid="nlhbhiq2" startid="npc6i4v2"/>
-                 <dir xml:id="dr5mfap1" place="below" staff="2" tstamp="0" vo="-3" ho="8">
-                    <rend fontfam="TimesNewRomanPS-ItalicMT" fontstyle="italic">
+                 <slur xml:id="seo90fl1" curvedir="below" endid="ngnmeik2" startid="nlgt7hh1"/> <!--Why does this slur not get rendered at all? -->
+                 <dir xml:id="dr5mfap1" ho="8" place="below" staff="2" tstamp="0" vo="-3">
+                    <rend xml:id="rbm4qv4" fontfam="TimesNewRomanPS-ItalicMT" fontstyle="italic">
                        mit sehr zartem Ausdruck
                     </rend>
                  </dir> <!-- Font should be different + Size should be smaller-->
@@ -330,7 +330,7 @@
                    </tuplet>
                       <chord xml:id="c3e8rv2">
                       <note xml:id="nalkcvf" dur="8" oct="4" pname="d"/>
-                      <note xml:id="n4a8v8l1" dur="8" oct="4" pname="g" tie="t" accid.ges="s"/>
+                      <note xml:id="n4a8v8l1" accid.ges="s" dur="8" oct="4" pname="g" tie="t"/>
                       <note xml:id="n8u7arb" dur="8" oct="5" pname="c" tie="t"/>
                       </chord>
                    <rest xml:id="rf0aou01" dur="8"/>
@@ -344,7 +344,7 @@
                       <note xml:id="n8flw7u2" accid="f" dur="8" pname="e" stem.dir="down"/>
                       </beam>
                    </tuplet>
-                   <note xml:id="nsexvgy1" dur="8" oct="4" pname="e" stem.dir="down" accid.ges="s"/>
+                   <note xml:id="nsexvgy1" accid.ges="s" dur="8" oct="4" pname="e" stem.dir="down"/>
                 </layer>
                 </staff>
                 <staff xml:id="sbv9bte" n="2">
@@ -358,7 +358,7 @@
                          </chord>
                       </tuplet>
                       <chord xml:id="czk11831" dur="8" stem.dir="down">
-                         <note xml:id="nb9wfv31" oct="3" pname="c" tie="t" accid.ges="s"/>
+                         <note xml:id="nb9wfv31" accid.ges="s" oct="3" pname="c" tie="t"/>
                          <note xml:id="neksvhz1" oct="3" pname="b" tie="t"/>
                       </chord>
                       <rest xml:id="r4fdf771" dur="8"/>
@@ -392,7 +392,7 @@
                 </staff>
                 <staff xml:id="sbgzd6l1" n="2">
                    <layer xml:id="l5t8xx3">
-                      <clef xml:id="chmcuat1" line="2" shape="G" ho="-17"/> <!--added @ho in order to make the clef-change appear at the end of the measure before-->
+                      <clef xml:id="chmcuat1" ho="-17" line="2" shape="G"/> <!--added @ho in order to make the clef-change appear at the end of the measure before-->
                       <rest xml:id="r9wcwjh" dur="4"/>
                       <chord xml:id="ccz0jox1" dots="1" dur="2" fermata="above">
                          <note xml:id="nmblkez1" accid="n" oct="3" pname="g"/>
@@ -413,8 +413,8 @@
                 </staff>
                 <!--ADDING DYNAMICS, SLURS AND TEXT DIRECTIVE TO MEASURE 9-->
                 <dynam xml:id="drf18qs2" startid="njq7cu6">ppp</dynam>
-                <dynam xml:id="d6677xv1" startid="n4hfkxn2" ho="-3">pppp</dynam>
-                <dir xml:id="dgo8mvi1" staff="2" tstamp="0.5" vo="-3" ho="3">wie ein Hauch</dir> <!-- Font should be different -->
+                <dynam xml:id="d6677xv1" ho="-3" startid="n4hfkxn2">pppp</dynam>
+                <dir xml:id="dgo8mvi1" ho="3" staff="2" tstamp="0.5" vo="-3">wie ein Hauch</dir> <!-- Font should be different -->
                 <slur xml:id="sfokvgy1" endid="nh2zetv1" startid="n4hfkxn2"/>
              </measure>
           </section>
