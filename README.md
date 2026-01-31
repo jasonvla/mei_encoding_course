@@ -2,6 +2,7 @@
 header-includes: 
 - \usepackage{float}
 - \usepackage{graphicx}
+- \usepackage{setspace}
 fontsize: 12pt
 geometry: margin=3cm
 credit: "Basisseminar Musikwissenschaftliche Perspektiven (Prüfung: 322485)"
