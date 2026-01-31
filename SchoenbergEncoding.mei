@@ -66,7 +66,7 @@
                   </layer>
                </staff>
                <dynam xml:id="don55c9" staff="1" tstamp="1">pp</dynam>
-               <tempo xml:id="tfdhkn4" mm="60" mm.unit="4" place="above" startid="c1jehlt1">Sehr langsam (𝅘𝅥)</tempo> <!-- Probably not the best way to encode the quarter note symbol.-->
+               <tempo xml:id="tfdhkn4" mm="60" mm.unit="4" place="above" startid="c1jehlt1">Sehr langsam (♩)</tempo> <!-- Probably not the best way to encode the quarter note symbol.-->
              </measure>
             <measure xml:id="magrhzg1" n="1">
                <staff xml:id="siymumd" n="1">
