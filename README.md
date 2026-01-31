@@ -43,10 +43,10 @@ In my opinion it is a perfect piece to practice key concepts of MEI music encodi
 
 # What worked well
 In general, I am positively surprised how much can be done in MEI despite not being very experienced in terms of music encoding. 
-Learning the basics such as how to place notes, arrange chords and adding accidentals was relatively intuitive. Due to the fact that the mei-friend can automatically assign @xml:id attributes to every encoded object, jumping to a specific measure or an exact note could also easily be done. Despite that, I quickly faced problems that were not solveable for me at first, such as changing the exact height of the `<pedal>` element in measures 5&6. At some point I was able to fix this issue because I figured out that the @ho and @vo attributes can be used in scenarios where the positions of certain elements in the score have to be changed in order to be matching with the reference-sheet. However, I am not sure whether @ho and @vo are a robust way to adjust positions because it seems very layout-dependent.
+Learning the basics such as how to place notes, arrange chords and adding accidentals was relatively intuitive. Due to the fact that the mei-friend can automatically assign @xml:id attributes to every encoded object, jumping to a specific measure or an exact note could also easily be done. Despite that, I quickly faced problems that were not solveable for me at first, such as changing the exact height of the `<pedal>` element in measures 5&6. At some point I was able to fix this issue because I figured out that the @ho and @vo attributes can be used in scenarios where the positions of certain elements in the score have to be changed in order to be matching with the reference-sheet. However, I am not sure whether @ho and @vo are a robust way to adjust positions because it seems very layout-dependent. See this example of the `<dynam>` adjustment:
 
 
-Before (@vo / @ho not adjusted):
+Before (@vo / @ho not added):
 ```{=latex}
 \begin{figure}[H]
 \centering
@@ -130,7 +130,7 @@ At the beginning of the piece, the tempo reads _Sehr langsam (♩)_. Thus I trie
 I couldn't figure out how to adjust the size of the note symbol. By looking up the valid attributes for `<symbol>`, I found the @scale attribute but adding that did not change the output in Verovio. 
 In order to at least have the symbol integrated (despite probably not being the best way to do it) I added the unicode-symbol ♩ into my encoding.
 
-Within measure 3, there are a couple of aspects that are not right yet: 
+Within measure 3, there are a couple of aspects that are not working as they should: 
 
 **Firstly**, the curving of the tie on the d-sharp within the first staff should be not that "flat" but a little bit more round (compare the reference sheet). Replacing the `<tie>` element with a `<slur>` did not help at all, in fact it even made the positioning worse.
 
@@ -235,7 +235,7 @@ How it should look:
 
 The same issue applies to the other directives in measure 8 and 9. The font itself looks identical (I assume both fonts are Times New Roman) but in Fig. 16, it is way thicker than in my version. Adjusting @fontstyle within `<rend>` did not change anything in the rendering itself.
 
-As of right now, I hope that this report helps to see both the encoding skills I've picked up during the course and the aspects I am currently struggling with. Despite the encoding being absolutely not perfect, I think that I've deepened my understanding of MEI in a way where I am now able to read .mei files without being overwhelmed or confused at all. Furthermore, I think the course and this assignment enabled me to pick up many more concepts of MEI through self-study but as I've shown in the Problems-section, there still is a lot of work to do in order to become more fluent, consistent and reliable in mei-encoding.
+As of right now, I hope that this report helps to see both the encoding skills I've picked up during the course and the aspects I am currently struggling with. Despite the encoding being absolutely not perfect, I think that I've deepened my understanding of MEI in a way where I am now able to read .mei files without being overwhelmed or confused at all. Furthermore, the course and this assignment enabled me to pick up many more concepts of MEI through self-study but as I've shown in the Problems-section, there still is a lot of work to do in order to become more fluent, consistent and reliable in mei-encoding.
 
 ## Next steps
 This is a short summary of how I would now continue with the encoding:
@@ -243,3 +243,7 @@ This is a short summary of how I would now continue with the encoding:
 Despite many open to-do's, I would highly prioritize confirming/testing the robustness of my encoding across different layouts (especially regarding the usage of @ho and @vo within certain elements such as `<dynam>`, `<pedal>` or `<clef>`). If it turns out that @ho and @vo are not a "good" way to adjust the positions of elements; I would certainly have to learn about another way to change positions.
 
 Moreover, obvious mistakes such as the missing bass-clef (2nd staff, measure 7) and the partially missing slurs and braces need to be fixed as soon as possible. Furthermore, aspects like the font- and engraving style need to be addressed as well as other layout-specific things like the exact amount of space each measure takes up. 
+
+## Reflection
+
+This assignment has fundamentally changed my perception of music encoding. Even before the MEI course, I thought that music coding could be complex and labor-intensive. However, at that point, I didn't understand how many different aspects had to be taken into account in order to properly encode a piece from scratch. Although I invested a lot of time, I feel that there are still countless things that could be done to further optimize the coding. Nevertheless, I am satisfied overall, especially given the fact that my very first contact with MEI was in this course.
