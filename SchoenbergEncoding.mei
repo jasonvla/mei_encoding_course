@@ -151,7 +151,7 @@
                <dynam xml:id="d6t7rov2" ho="-13" layer="1" place="above" staff="2" tstamp="3" vo="-8">pppp</dynam>
                <dynam xml:id="d78756f" layer="1" place="within" staff="1" tstamp="3">p</dynam>
                <hairpin xml:id="holvpuy2" form="cres" place="below" staff="1" tstamp="3" tstamp2="5"/>
-               <tie xml:id="s2yfupd" curvedir="below" endid="nx2i61e" startid="nro5f2x1" vo="-2"/> <!--When putting this tie to the end of measure 4, the first half of the slur disappears in the System and page-layout-->
+               <tie xml:id="s2yfupd" curvedir="below" endid="nx2i61e" startid="nro5f2x1" vo="-2"/> <!--When putting this tie to the end of measure 4, the first half disappears in the System and page-layout-->
             </measure>
              <sb xml:id="skcnl9m2"/>
             <measure xml:id="m12unov2" n="4">
